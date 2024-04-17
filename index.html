@@ -22,6 +22,12 @@
                 700: "#25AEBE",
                 600: "#25AEBE",
               },
+			  main:{
+				background:"#101010",
+			  },
+			  backgroundImage: {
+				background: "linear-gradient(270deg, #111 4.16%, rgba(27, 27, 27, 0.00) 105.36%)",
+				},
             },
           },
         },
@@ -40,42 +46,39 @@
     </script>
   </head>
   <body
-    class="bg-slate-100 dark:bg-slate-800 dark:bg-opacity-96 relative flex min-h-screen flex-col justify-center overflow-hidden py-6 sm:py-12"
+    class="bg-main-background dark:bg-white transition items-center duration-1000 relative flex min-h-screen flex-col justify-center overflow-hidden py-6 sm:py-12"
   >
-  	<!-- header section -->
-    <section class="w-full" id="header">
-		
-	</section>
 
     
   	<!-- toggle button -->
 	<div
-      class="Frame995 w-56 h-14 pl-8 pr-5 bg-neutral-900 rounded-3xl justify-end items-center gap-2 inline-flex fixed right-5 bottom-5"
+      class=" w-64 h-16	 pl-8 pr-5 bg-neutral-900 transition  duration-1000 shadow-xl  dark:bg-white rounded-3xl justify-end items-center gap-6 inline-flex fixed right-20 bottom-20"
       id="theme-toggle"
     >
       <div
-        class="Dark text-white text-opacity-30 text-base font-normal font-['Poppins'] leading-10"
+        class="Dark text-gray-500 dark:text-black text-base font-semi-bold text-xl  text-opacity-30 text-base font-normal font-['Poppins'] leading-10"
       >
         Dark
       </div>
       <div
-        class="Group288884 w-20 h-6 relative rounded-full p-1 bg-black dark:bg-black relative transition-colors duration-500 ease-in focus:outline-none focus:ring-2 focus:ring-custom-700 dark:focus:ring-custom-600 focus:border-transparent"
+        class="w-20 h-8 relative rounded-full p-1  border border-custom-700 bg-black dark:bg-white relative transition  duration-1000 ease-in focus:outline-none focus:ring-2 focus:ring-custom-700 dark:focus:ring-custom-600 dark:focus:border-custom-700 focus:border-transparent"
       >
         <div
           id="theme-toggle-dark-icon"
-          class="hidden rounded-full w-4 h-4 bg-custom-700 dark:bg-custom-700 relative ml-0 dark:ml-20 pointer-events-none transition-all duration-300 ease-out"
+          class="hidden rounded-full w-6 h-6 bg-custom-700 dark:bg-custom-700 relative ml-0 dark:ml-20 pointer-events-none transition  duration-1000 ease-in"
         ></div>
         <div
           id="theme-toggle-light-icon"
-          class="hidden rounded-full w-4 h-4 bg-custom-700 dark:bg-custom-700 relative ml-0 dark:ml-14 pointer-events-none transition-all duration-300 ease-out"
+          class="hidden rounded-full w-6 h-6 bg-custom-700 dark:bg-custom-700 relative ml-0 dark:ml-12 pointer-events-none transition  duration-1000 ease-in"
         ></div>
       </div>
       <div
-        class="Light text-white text-base font-normal font-['Poppins'] leading-10"
+        class="Light text-white dark:text-gray-500  text-base font-semi-bold text-xl font-['Poppins'] leading-10"
       >
         Light
       </div>
     </div>
+	
     <script>
       var themeToggleDarkIcon = document.getElementById(
         "theme-toggle-dark-icon"
