@@ -67,7 +67,7 @@
         <div class="background2 blur-layer "></div>
     </div>
 
-    <section class="fullpage-menu"  >
+    <section class="fullpage-menu hidden lg:hidden"  >
         <div class="fullpage-menu-inner">
             <div class="menu-bg blur-lg bg-white dark:bg-black "></div>
             <nav>
@@ -422,11 +422,14 @@ var menuToggle = document.getElementById("burger");
     
     var navTl = gsap.timeline({ paused: true });
     
+ 
     navTl.to('.fullpage-menu', {
         duration: 0,
         display: "block",
         ease: Expo.easeInOut
     }, "<");
+
+
     
     navTl.to('.menu-bg', {
         duration: 1,
@@ -443,7 +446,19 @@ var menuToggle = document.getElementById("burger");
     }, "-=0.5");
     
     navTl.reverse();
+
+    function updateVisibility() {
+    // Check if the window width is less than 1024px (for example)
+    if (window.innerWidth > 1024 ) {
+        // If it's smaller, display the fullpage-menu
+        menuBar.reversed(true);
+        navTl.reversed(true);
+    }
+}
+updateVisibility();
     
+window.addEventListener('resize', updateVisibility);
+
     menuToggle.addEventListener('click', function () {
         menuBar.reversed(!menuBar.reversed());
         navTl.reversed(!navTl.reversed());
