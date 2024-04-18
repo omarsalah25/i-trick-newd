@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
+
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>I-Trick</title>
 		<link rel="icon" type="image/svg+xml" href="./assets/favicon/icon.svg" />
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 		<!-- Tailwind CSS with class strategy -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="/css/style.css">
@@ -64,30 +66,43 @@
         <div class="background1 blur-layer "></div>
         <div class="background2 blur-layer "></div>
     </div>
+
+    <section class="fullpage-menu"  >
+        <div class="fullpage-menu-inner">
+            <div class="menu-bg blur-lg bg-white dark:bg-black "></div>
+            <nav>
+                <ul class="main-menu">
+                    <li><a href="javascript:void(0)"><span data-clip="Home" class="text-black dark:text-white">Home</span></a></li>
+                    <li><a href="javascript:void(0)"><span data-clip="About" class="text-black dark:text-white">About</span></a></li>
+                    <li><a href="javascript:void(0)"><span data-clip="Work" class="text-black dark:text-white">Work</span></a></li>
+                    <li><a href="javascript:void(0)"><span data-clip="Contact" class="text-black dark:text-white">Contact</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
 		<div
-			class="container sticky z-20 mx-auto -top-2 duration-500  lg:top-0 lg:px-0 bg-white dark:bg-black dark:bg-opacity-50 rounded-3xl shadow-lg  ">
-			<div class="relative -mx-4 flex items-center ">
+			class="container sticky z-20 mx-auto -top-1 duration-500  lg:top-0 lg:px-0 bg-white dark:bg-black dark:bg-opacity-50 rounded-3xl shadow-lg  ">
+			<div class="relative mx:0 lg:-mx-4 flex items-center ">
 				<div class="w-60 max-w-full px-0">
 					<a href="index.html" class="block w-full">
-						<div alt="logo" class="navbar-logo dark:navbar-logo py-6"></div>
+						<div alt="logo" class="navbar-logo py-6"></div>
 					</a>
 				</div>
 				
-					<div class="flex w-full  flex-row  px-4">
+					<div class="flex w-full relative flex-row  px-4">
 						<button
-							id="navbarToggler"
-							class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden">
-							<span
-								class="relative my-[6px] block h-[2px] w-[30px] dark:bg-white bg-black "></span>
-							<span
-								class="relative my-[6px] block h-[2px] w-[30px] dark:bg-white bg-black"></span>
-							<span
-								class="relative my-[6px] block h-[2px] w-[30px] dark:bg-white bg-black"></span>
+							id="burger"
+							class="absolute menu-toggle top-0 right-4 z-20 top-1/2 block -translate-y-1/2 rounded-lg px-5 py-[6px] ring-primary focus:ring-2 hover:-translate-y-1/2 lg:hidden duration-500">
+                                <svg viewBox="0 0 12 10" class="hamburger" height="40px" width="40px">
+                                    <path d="M10,2 L2,2" class="bar-1 stroke-black	dark:stroke-white" ></path>
+                                    <path d="M2,5 L10,5" class="bar-2 stroke-black	dark:stroke-white"></path>
+                                    <path d="M10,8 L2,8" class="bar-3 stroke-black	dark:stroke-white"></path>
+                                </svg>
+                        </svg>
 						</button>
 						<nav
-							id="navbarCollapse"
-							class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6">
-                            <div class="flex 2xl:ml-20 justify-between items-center">
+							class="fixed -top-5 right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6">
+                            <div class="flex 2xl:ml-20 justify-between items-center ">
 
                                 <div>
                                 <ul class=" flex 2xl:ml-20  ">
@@ -163,6 +178,7 @@
                             </div>
 						
 						</nav>
+                        
 					</div>
                
 				
@@ -177,7 +193,7 @@
     
                 <div class="order-2 lg:order-1 md:order-1 ">
                     <h2 class="lg:text-7xl text-5xl  font-poppins font-bold py-5 text-custom-700 dark:text-white">Smartness, That You Deserve.</h2>
-                    <p class="text-md lg:text-2xl opacity-50 font-poppins py-5">Trick gives many services to you like payment, social media accounts and many other services.</p>
+                    <p class="text-md lg:text-2xl text-gray-400 font-poppins py-5">Trick gives many services to you like payment, social media accounts and many other services.</p>
                     <div class="flex pt-5 gap-2 lg:gap-10 ">
                     <button class="text-sm lg:text-2xl shadow-lg  border-none font-poppins  text-white rounded-full font-normal bg-white dark:bg-black w-full  "><div class="flex gap-3 items-center bg-custom-700 p-3 lg:p-6 rounded-full text-center hover:-translate-y-2 hover:-translate-x-2 duration-500 justify-center font-semibold">Register Now <i class="bi bi-arrow-right "></i></div></button>
                     <button class="text-sm lg:text-2xl shadow-lg  font-poppins text-white rounded-full font-normal w-full bg-transparent border border-black dark:border-white "><div class="flex gap-3 items-center lg:p-5 p-3 rounded-full text-center hover:-translate-y-1 hover:-translate-x-1 duration-500 justify-center text-black dark:text-white font-semibold">Our Products</div></button>
@@ -191,7 +207,7 @@
             <div class="container  bg-transparent dark:text-white rounded-lg p-6 mt-4 flex flex-col items-center justify-center">
                 <div class="container ">
                   <h1 class="text-custom-700 dark:text-white lg:text-7xl text-5xl font-poppins font-bold mb-5">About Us</h1>
-                  <p class="text-md lg:text-2xl opacity-50 font-poppins  w-full sm:w-1/2 md:w-2/3 lg:w-1/2 xl:w-1/2 ">
+                  <p class="text-md lg:text-2xl text-gray-400 font-poppins  w-full sm:w-1/2 md:w-2/3 lg:w-1/2 xl:w-1/2 ">
                     An advanced Egyptian company consisting of a team of technology makers whose goal is to exploit modern technology in the
                     improvement of all multi-occurring uses,
                     based on a specialized team keen to provide you with the service always in the best way.
@@ -369,5 +385,68 @@
       }
     });
   </script>
+  <script>
+    // Get the navbar toggler button
+    const navbarToggler = document.getElementById('navbarToggler');
+    // Get the navbar collapse menu
+    const navbarCollapse = document.getElementById('navbarCollapse');
+
+    // Add click event listener to navbar toggler button
+    navbarToggler.addEventListener('click', function() {
+        // Toggle the 'hidden' class on navbar collapse menu
+        navbarCollapse.classList.toggle('hidden');
+    });
+</script>
+<script>
+var menuToggle = document.getElementById("burger");
+
+    var menuBar = gsap.timeline();
+    
+    menuBar.to('.bar-1', 0.5, {
+        attr: { d: "M8,2 L2,8" },
+        x: 1,
+        ease: Power2.easeInOut
+    }, 'start')
+    
+    menuBar.to('.bar-2', 0.5, {
+        autoAlpha: 0
+    }, 'start')
+    
+    menuBar.to('.bar-3', 0.5, {
+        attr: { d: "M8,8 L2,2" },
+        x: 1,
+        ease: Power2.easeInOut
+    }, 'start')
+    
+    menuBar.reverse();
+    
+    var navTl = gsap.timeline({ paused: true });
+    
+    navTl.to('.fullpage-menu', {
+        duration: 0,
+        display: "block",
+        ease: Expo.easeInOut
+    }, "<");
+    
+    navTl.to('.menu-bg', {
+        duration: 1,
+        opacity: 1,
+        ease: Expo.easeInOut
+    }, "<");
+    
+    navTl.from('.main-menu li a', {
+        duration: 1.5,
+        y: "100%",
+        rotateY: 30,
+        stagger: 0.2,
+        ease: Expo.easeInOut
+    }, "-=0.5");
+    
+    navTl.reverse();
+    
+    menuToggle.addEventListener('click', function () {
+        menuBar.reversed(!menuBar.reversed());
+        navTl.reversed(!navTl.reversed());
+    })</script>
 	</body>
 </html>
