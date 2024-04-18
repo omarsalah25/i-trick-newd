@@ -29,6 +29,12 @@
                       },
                   },
                 },
+                fontFamily: {
+                    poppins: ['Poppins', 'sans-serif']
+      },
+      rotate:{
+        '15':'15deg',
+      }
               },
             };
           </script>
@@ -157,10 +163,14 @@
       
     </head>
     <body
-      class="bg-white dark:bg-main-background transition items-center duration-1000 relative flex min-h-screen flex-col justify-center overflow-hidden py-6 sm:py-12"
+      class="bg-white dark:bg-main-background transition items-center duration-1000 relative flex min-h-screen flex-col justify-center overflow-y-scroll py-6 sm:py-12"
     >
+    <div class="background-container">
+        <div class="background1 blur-layer "></div>
+        <div class="background2 blur-layer "></div>
+    </div>
 		<div
-			class="container fixed mx-auto top-12 px-0 bg-white dark:bg-black dark:bg-opacity-50 rounded-3xl">
+			class="container  mx-auto top-12 px-0 bg-white dark:bg-black dark:bg-opacity-50 rounded-3xl shadow-lg my-5 ">
 			<div class="relative -mx-4 flex items-center ">
 				<div class="w-60 max-w-full px-0">
 					<a href="index.html" class="block w-full">
@@ -189,35 +199,35 @@
                                     <li class="group relative">
                                         <a
                                             href="#home"
-                                            class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-black group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 ">
+                                            class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-black group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 duration-500">
                                             Home
                                         </a>
                                     </li>
                                     <li class="group relative">
                                         <a
                                             href="#about"
-                                            class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700  xl:ml-10">
+                                            class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 duration-500 xl:ml-10">
                                             About
                                         </a>
                                     </li>
                                     <li class="group relative">
                                         <a
                                             href="#pricing"
-                                            class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700  xl:ml-10">
+                                            class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 duration-500 xl:ml-10">
                                             Pricing
                                         </a>
                                     </li>
                                     <li class="group relative">
                                         <a
                                             href="#team"
-                                            class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700  xl:ml-10">
+                                            class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 duration-500 xl:ml-10">
                                             Team
                                         </a>
                                     </li>
                                     <li class="group relative">
                                         <a
                                             href="#contact"
-                                            class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700  xl:ml-10">
+                                            class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 duration-500 xl:ml-10">
                                             Contact
                                         </a>
                                     </li>
@@ -233,21 +243,21 @@
                                     <li class="group relative">
                                         <a
                                             href="signin.html"
-                                            class="ud-menu-scroll relative mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700  xl:ml-10">
+                                            class="ud-menu-scroll relative mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700  xl:ml-10 duration-500">
                                             <i class="bi bi-cart4 p-0 text-3xl mb-1 text-custom-700 "></i><span class="absolute top-1.5 -left-2 px-2 py-0 rounded-full bg-custom-700 text-white ">0</span>
                                         </a>
                                     </li>
                                     <li class="group relative">
                                         <a
                                             href="signin.html"
-                                            class="ud-menu-scroll bg-custom-700 rounded-full p-4 py-2 mx-2 flex  text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex   lg:text-black lg:group-hover:text-custom-700  ">
+                                            class="ud-menu-scroll bg-custom-700 rounded-full p-4 py-2 mx-2 flex  text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex   lg:text-black lg:group-hover:text-white duration-500 dark:lg:group-hover:text-opacity-50  ">
                                             Login
                                         </a>
                                     </li>
                                     <li class="group relative">
                                         <a
                                             href="signin.html"
-                                            class="ud-menu-scroll bg-custom-700 rounded-full p-4 py-2 mx-2 flex  text-base font-medium text-dark group-hover:text-primary dark:text-white  lg:mr-0 lg:inline-flex   lg:text-black lg:group-hover:text-custom-700 ">
+                                            class="ud-menu-scroll bg-custom-700 rounded-full p-4 py-2 mx-2 flex  text-base font-medium text-dark group-hover:text-primary dark:text-white  lg:mr-0 lg:inline-flex   lg:text-black lg:group-hover:text-white duration-500 dark:lg:group-hover:text-opacity-50  ">
                                             Register
                                         </a>
                                     </li>
@@ -265,26 +275,75 @@
 			</div>
 		</div>
 
-		<div class="background-container">
-			<div class="background1 blur-layer "></div>
-			<div class="background2 blur-layer "></div>
-		</div>
-		<div class="w-full bg-transparent dark:text-white rounded-lg p-6 mt-4">
-			<div class="flex justify-center items-center">
-				<a
-					href="#"
-					class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-					<h5
-						class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-						Quote by Agent K
-					</h5>
-					<p class="font-normal text-gray-700 dark:text-gray-400">
-						"A person is smart. People are dumb, panicky, dangerous animals and
-						you know it." - Agent K, Men in Black
-					</p>
-				</a>
-			</div>
-		</div>
+		
+        <div class="container " >
+            <div class="w-full bg-transparent dark:text-white rounded-lg p-6 mt-4">
+               <div class="flex flex-col md:flex-row justify-center items-center" id="#">
+    
+                <div class="order-2 lg:order-1 md:order-1 ">
+                    <h2 class="lg:text-7xl text-5xl  font-poppins font-bold py-5 text-custom-700 dark:text-white">Smartness, That You Deserve.</h2>
+                    <p class="text-md lg:text-2xl opacity-50 font-poppins py-5">Trick gives many services to you like payment, social media accounts and many other services.</p>
+                    <div class="flex pt-5 gap-2 lg:gap-10 ">
+                    <button class="text-sm lg:text-2xl shadow-lg  border-none font-poppins  text-white rounded-full font-normal bg-white dark:bg-black w-full  "><div class="flex gap-3 items-center bg-custom-700 p-3 lg:p-6 rounded-full text-center hover:-translate-y-2 hover:-translate-x-2 duration-500 justify-center font-semibold">Register Now <i class="bi bi-arrow-right "></i></div></button>
+                    <button class="text-sm lg:text-2xl shadow-lg  font-poppins text-white rounded-full font-normal w-full bg-transparent border border-black dark:border-white "><div class="flex gap-3 items-center lg:p-5 p-3 rounded-full text-center hover:-translate-y-1 hover:-translate-x-1 duration-500 justify-center text-black dark:text-white font-semibold">Our Products</div></button>
+                    </div>
+                </div>  
+                <div class="order-1 lg:order-2 md:order-2 mb-8 md:mb-0 md:mr-8 ">
+                    <img class="w-full float-right hover:rotate-15 duration-500	" src="/img/trick-hero-pic.png" alt="" srcset="">
+                </div>                 
+</div>
+            </div>
+            <div class="w-full bg-transparent dark:text-white rounded-lg p-6 mt-4">
+                <div class="flex justify-center items-center">
+                    <a
+                        href="#about"
+                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        <h5
+                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            Quote by Agent K
+                        </h5>
+                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                            "A person is smart. People are dumb, panicky, dangerous animals and
+                            you know it." - Agent K, Men in Black
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="w-full bg-transparent dark:text-white rounded-lg p-6 mt-4">
+                <div class="flex justify-center items-center">
+                    <a
+                        href="#products"
+                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        <h5
+                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            Quote by Agent K
+                        </h5>
+                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                            "A person is smart. People are dumb, panicky, dangerous animals and
+                            you know it." - Agent K, Men in Black
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="w-full bg-transparent dark:text-white rounded-lg p-6 mt-4">
+                <div class="flex justify-center items-center">
+                    <a
+                        href="#footer"
+                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        <h5
+                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            Quote by Agent K
+                        </h5>
+                        <p class="font-normal text-gray-700 dark:text-gray-400">
+                            "A person is smart. People are dumb, panicky, dangerous animals and
+                            you know it." - Agent K, Men in Black
+                        </p>
+                    </a>
+                </div>
+            </div>
+         
+        </div>
+	
 		<!-- toggle button -->
         <div class="flex justify-end items-center w-full h-20 fixed bottom-14">
         <div
