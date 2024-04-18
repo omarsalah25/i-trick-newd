@@ -6,6 +6,7 @@
 		<title>I-Trick</title>
 		<link rel="icon" type="image/svg+xml" href="./assets/favicon/icon.svg" />
 		<!-- Tailwind CSS with class strategy -->
+        <link rel="stylesheet" href="/css/style.css">
 		<script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 		<!-- Configure your strategy -->
@@ -170,7 +171,7 @@
         <div class="background2 blur-layer "></div>
     </div>
 		<div
-			class="container  mx-auto top-12 px-0 bg-white dark:bg-black dark:bg-opacity-50 rounded-3xl shadow-lg my-5 ">
+			class="container sticky z-20 mx-auto top-12 px-0 bg-white dark:bg-black dark:bg-opacity-50 rounded-3xl shadow-lg my-5 ">
 			<div class="relative -mx-4 flex items-center ">
 				<div class="w-60 max-w-full px-0">
 					<a href="index.html" class="block w-full">
@@ -293,22 +294,71 @@
                 </div>                 
 </div>
             </div>
-            <div class="w-full bg-transparent dark:text-white rounded-lg p-6 mt-4">
-                <div class="flex justify-center items-center">
-                    <a
-                        href="#about"
-                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                        <h5
-                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Quote by Agent K
-                        </h5>
-                        <p class="font-normal text-gray-700 dark:text-gray-400">
-                            "A person is smart. People are dumb, panicky, dangerous animals and
-                            you know it." - Agent K, Men in Black
-                        </p>
-                    </a>
+            <div class="container  bg-transparent dark:text-white rounded-lg p-6 mt-4 flex flex-col items-center justify-center">
+                <div class="container ">
+                  <h1 class="text-custom-700 dark:text-white lg:text-7xl text-5xl font-poppins font-bold mb-5">About Us</h1>
+                  <p class="text-md lg:text-2xl opacity-50 font-poppins  w-full sm:w-1/2 md:w-2/3 lg:w-1/2 xl:w-1/2 ">
+                    An advanced Egyptian company consisting of a team of technology makers whose goal is to exploit modern technology in the
+                    improvement of all multi-occurring uses,
+                    based on a specialized team keen to provide you with the service always in the best way.
+                  </p>
                 </div>
-            </div>
+            
+                <div class="container grid grid-cols-1 justify-items-center xl:grid-cols-3 gap-5 mt-10 rounded-lg">
+                  <!-- Column 1 -->
+                  <div class="mt-10 gray-200 bg-opacity-50 dark:bg-black dark:bg-opacity-50 h-80 md:h-auto lg:h-auto xl:h-auto w-full  lg:w-96 xl:w-96 p-6 rounded-lg">
+                    <h2 class="flex items-center text-custom-700 text-lg md:text-xl lg:text-2xl xl:text-3xl ">
+                      <i class="fa-solid fa-ring text-custom-700 me-3"></i>
+                      Mission
+                    </h2>
+                    <p class="text-custom-customGray text-gray-500 text-base md:text-lg lg:text-lg xl:text-lg mt-2 ">
+                      Our main mission is to always deal with our customers through modern technological means,
+                      which will give them a lot of comfort and discretion in dealing with their customers and save energy, time, and effort.
+                    </p>
+                  </div>
+            
+                  <!-- Column 2 -->
+                  <div class="bg-custom-700 dark:bg-custom-700 h-96 md:h-auto lg:h-auto xl:h-auto w-full  lg:w-96 xl:w-96 pt-5 px-6 rounded-lg 
+                  flex flex-col justify-between">
+                    <div>
+                        <p class="text-left text-white text-gray-800 dark:text-gray-200 text-lg leading-snug tracking-tight mb-2 font-bold">
+                            Accepted Devices
+                          </p>
+                          <p class="text-left text-white dark:text-white text-lg leading-snug tracking-tight mb-2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In amet, morbi non at sed neque.
+                          </p>
+                    </div>
+                    
+                    <div style="background-image: url('img/iPhones.png');  background-size: contain; width:100%; height:200px; background-repeat: no-repeat; background-position: center;" class="w-full ms-0 lg:ms:9  "></div>
+                  </div>
+            
+                  <!-- Column 3 -->
+                  <div class="flex flex-col items-start self-center ">
+                    <div class="flex flex-col items-center justify-center">
+                      <div class="bg-gray-200 bg-opacity-50 dark:bg-black dark:bg-opacity-50 h-80 md:h-auto lg:h-auto xl:h-auto w-full  lg:w-96 xl:w-96 p-6 mb-5 rounded-lg">
+                        <h2 class="flex items-center text-custom-700 text-lg md:text-xl lg:text-2xl xl:text-3xl ">
+                          <i class="fa-solid fa-chart-simple text-custom-700 me-3"></i>
+                          Value
+                        </h2>
+                        <p class="text-gray-500 text-base md:text-lg lg:text-lg xl:text-lg mt-2">
+                          Integration of technology in all aspects of life, satisfaction, and customer-oriented
+                        </p>
+                      </div>
+                      <div class="bg-gray-200 bg-opacity-50 dark:bg-black dark:bg-opacity-50 h-80 md:h-auto lg:h-auto xl:h-auto w-full  lg:w-96 xl:w-96 p-6 rounded-lg">
+                        <h2 class="flex items-center text-custom-700 text-lg md:text-xl lg:text-2xl xl:text-3xl ">
+                          <i class="fa-solid fa-spa text-custom-700 me-3"></i>
+                          Vision
+                        </h2>
+                        <p class="text-gray-500 text-base md:text-lg lg:text-lg xl:text-lg mt-2">
+                          to carry out the fancy of smart technology around the globe through our service
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+            
+            
+                </div>
+              </div>
             <div class="w-full bg-transparent dark:text-white rounded-lg p-6 mt-4">
                 <div class="flex justify-center items-center">
                     <a

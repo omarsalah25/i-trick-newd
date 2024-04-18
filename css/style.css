@@ -1,5 +1,105 @@
+/* navbar */
+
 .navbar-logo {
 	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	background-image: url("trick-logo-black.png");
+}
+.dark .navbar-logo {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	background-image: url("trick-logo-white.png");
+}
+/* navbar */
 
-	background-image: url("https://i-trick.com/assets/img/trick-logo.png");
+/* body background  */
+
+body {
+	position: relative;
+}
+
+.background-container {
+	position: absolute;
+	inset: 0;
+	overflow: hidden;
+	z-index: -1;
+	top: 0 !important;
+}
+
+.background-container div {
+	width: 100%;
+	height: 100%;
+	transition: transform 0.5s ease-in-out;
+}
+
+.background1,
+.background2 {
+	position: absolute;
+	top: 0;
+	background-image: url("trick-home.png");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: transform 1.5s ease-in-out;
+}
+.background1 {
+	right: 700px;
+	width: 30% !important;
+}
+.background2 {
+	left: 450px;
+	width: 45% !important;
+}
+
+/* .blur-layer {
+	filter: blur(50px);
+} */
+
+.background1 {
+	z-index: -1;
+	animation: translate1 15s infinite alternate ease-in-out;
+}
+
+.background2 {
+	z-index: -2;
+	animation: translate2 17s infinite alternate ease-in-out;
+}
+
+@keyframes translate1 {
+	0% {
+		transform: translate(600px, 200px);
+	}
+	25% {
+		transform: translate(600px, -100px);
+	}
+	50% {
+		transform: translate(300px, -100px);
+	}
+	75% {
+		transform: translate(600px, -100px);
+	}
+	100% {
+		transform: translate(600px, 200px);
+	}
+}
+
+@keyframes translate2 {
+	0% {
+		transform: translate(-600px, -500px);
+	}
+	25% {
+		transform: translate(-600px, 0px);
+	}
+	50% {
+		transform: translate(-300px, 300px);
+	}
+	75% {
+		transform: translate(-600px, -300px);
+	}
+
+	100% {
+		transform: translate(-600px, -500px);
+	}
 }
