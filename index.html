@@ -67,8 +67,8 @@
         <div class="background2 blur-layer "></div>
     </div>
 
-    <section class="fullpage-menu overflow-hidden "  >
-        <div class="fullpage-menu-inner">
+    <section class="fullpage-menu overflow-hidden  "  >
+        <div class="fullpage-menu-inner ">
             <div class="menu-bg blur-lg bg-white dark:bg-black "></div>
             <nav>
                 <ul class="main-menu ">
@@ -80,16 +80,55 @@
                     <!-- <li><a href="signin.html"><span data-clip="Cart" class="text-black dark:text-white">Cart</span></a></li> -->
                     <li><a href="javascript:void(0)" class="w-60 text-center font-poppins "><span data-clip="Login" 
                         class=" p-2 text-xl font-semi-bold bg-custom-700 rounded-full  text-black  dark:text-white duration-500  ">Login</span></a></li>
-                    <!-- <li><a href="javascript:void(0)"><span data-clip="Contact" class="text-black dark:text-white  font-poppins">Contact</span></a></li> -->
-                      
+                  
+                        <!-- <li><a href="javascript:void(0)"><span data-clip="Contact" class="text-black dark:text-white  font-poppins">Contact</span></a></li> -->
+                     
+                     
+                        <li>
+                        <!-- <span data-clip="a7a"> -->
+                            <div class="flex justify-start items-center w-full h-20  ">
+                                <div
+                                    class=" w-72 h-14 pl-8 pr-5 mr-8 lg:mr-20  bg-white transition  drop-shadow-lg	 dark:bg-neutral-900 rounded-3xl justify-end items-center gap-6 inline-flex "
+                                    id="theme-toggle"
+                                >
+                        
+                                    <div
+                                    class=" text-gray-500  text-base font-semi-bold text-xl  text-opacity-50 text-base font-normal font-['Poppins'] leading-10"
+                                    >
+                                    Dark
+                                    </div>
+                                
+                                    <div
+                                    class="w-full h-8 relative rounded-full pt-0.5 px-1 border border-custom-700 bg-white dark:bg-black relative transition  duration-500 ease-in focus:outline-none focus:ring-2 focus:ring-custom-700 dark:focus:ring-custom-600 dark:focus:border-custom-700 focus:border-transparent"
+                                    >
+                                    <div
+                                    id="theme-toggle-dark-icon"
+                                    class="hidden rounded-full w-6 h-6 bg-custom-700  relative float-right dark:float-left pointer-events-none transition  duration-1000 ease-in"
+                                ></div>
+                                    <div
+                                        id="theme-toggle-light-icon"
+                                        class="hidden rounded-full w-6 h-6 bg-custom-700  relative float-right dark:float-left  pointer-events-none transition  duration-1000 ease-in"
+                                    ></div>
+                                    
+                                    </div>
+                                    <div
+                                    class=" text-gray-500  text-opacity-50  text-base font-semi-bold text-xl font-['Poppins'] leading-10"
+                                >
+                                    Light
+                                </div>
+                                </div>
+                            </div>
+                        <!-- </span> -->
+                      </li>
 
                 </ul>
+                
             </nav>
         </div>
     </section>
 		<div
 			class="container sticky z-20 mx-auto -top-1 duration-500  lg:top-0 lg:px-0 bg-white dark:bg-black dark:bg-opacity-50 rounded-3xl shadow-lg  ">
-			<div class="relative mx:0 lg:-mx-4 flex items-center ">
+			<div class="relative mx:0 lg:-mx-4 flex items-center p-2 lg:p-0 ">
 				<div class="w-60 max-w-full px-0">
 					<a href="index.html" class="block w-full">
 						<div alt="logo" class="navbar-logo py-6"></div>
@@ -99,7 +138,7 @@
 					<div class="flex w-full relative flex-row  px-4">
 						<button
 							id="burger"
-							class="absolute menu-toggle top-0 right-4 z-20 top-1/2 block -translate-y-1/2 rounded-lg px-5 py-[6px] ring-primary focus:ring-2 hover:-translate-y-1/2 lg:hidden duration-500">
+							class="absolute  menu-toggle top-0 right-4 z-20 top-1/2 block -translate-y-1/2 rounded-lg px-5 py-[6px] ring-primary  hover:-translate-y-1/2 lg:hidden duration-500">
                                 <svg viewBox="0 0 12 10" class="hamburger" height="40px" width="40px">
                                     <path d="M10,2 L2,2" class="bar-1 stroke-black	dark:stroke-white" ></path>
                                     <path d="M2,5 L10,5" class="bar-2 stroke-black	dark:stroke-white"></path>
@@ -343,7 +382,7 @@
             Light
         </div>
         </div>
-    </div>
+        </div>
   <script>
     var themeToggleDarkIcon = document.getElementById(
       "theme-toggle-dark-icon"
@@ -406,6 +445,7 @@
 </script>
 <script>
 var menuToggle = document.getElementById("burger");
+var themeToggle = document.getElementById("theme-toggle");
 
     var menuBar = gsap.timeline();
     
@@ -452,7 +492,23 @@ var menuToggle = document.getElementById("burger");
         ease: Expo.easeInOut
     }, "-=0.5");
     
+   
+
+
+
+ 
+    
     navTl.reverse();
+
+    var themeTl = gsap.timeline({ paused: true });
+
+    themeTl.from('.main-menu li #theme-toggle', {
+        duration: 1.5,
+        y: "150%",
+        ease: "power1.out",
+    }, "-=0.5");
+    themeTl.reverse();
+
 
     function updateVisibility() {
     // Check if the window width is less than 1024px (for example)
@@ -469,6 +525,9 @@ window.addEventListener('resize', updateVisibility);
     menuToggle.addEventListener('click', function () {
         menuBar.reversed(!menuBar.reversed());
         navTl.reversed(!navTl.reversed());
+        themeTl.reversed(!themeTl.reversed());
+    themeTl.delay(1.5)
+
     })</script>
 	</body>
 </html>
