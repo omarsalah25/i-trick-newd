@@ -1,16 +1,15 @@
 /* navbar */
-
 .navbar-logo {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
-	background-image: url("trick-logo-black.png");
+	background-image: url("/img/trick-logo-black.png");
 }
 .dark .navbar-logo {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
-	background-image: url("trick-logo-white.png");
+	background-image: url("/img/trick-logo-white.png");
 }
 /* navbar */
 
