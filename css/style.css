@@ -22,7 +22,7 @@ body {
 .background2 {
 	position: absolute;
 	top: 0;
-	background-image: url("trick-home.png");
+	background-image: url("/img/trick-home.png");
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
