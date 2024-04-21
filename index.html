@@ -788,6 +788,40 @@ window.addEventListener('resize', updateVisibility);
 });
 
 
+function throttle(func, delay) {
+  let lastCall = 0;
+  return function(...args) {
+    const now = new Date().getTime();
+    if (now - lastCall >= delay) {
+      func(...args);
+      lastCall = now;
+    }
+  };
+}
+
+// Debounce function: Executes the provided function after it stops being called for `delay` milliseconds
+function debounce(func, delay) {
+  let timeoutId;
+  return function(...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      func(...args);
+    }, delay);
+  };
+}
+
+// Your scroll event handler function
+function handleScroll() {
+  // Your scroll event handling logic here
+  console.log('Scrolling...');
+}
+
+// Throttle the scroll event handler to only execute every 100 milliseconds
+window.addEventListener('scroll', throttle(handleScroll, 100));
+
+// Or debounce the scroll event handler to only execute after scrolling stops for 100 milliseconds
+window.addEventListener('scroll', debounce(handleScroll, 100));
+
 </script>
 	</body>
 </html>
