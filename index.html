@@ -52,6 +52,7 @@
 				document.documentElement.classList.remove("dark")
 			}
 		</script>
+        
       
 	</head>
 
@@ -132,6 +133,7 @@
 
     <!-- Start Navbar -->
 		<div
+        id="scrollDiv"
 			class="container sticky z-20 mx-auto -top-1 duration-500  lg:top-0 lg:px-0 bg-white dark:bg-black dark:bg-opacity-50 rounded-3xl shadow-lg  ">
 			<div class="relative mx:0 lg:-mx-4 flex items-center p-2 lg:p-0 ">
 				<div class="w-60 max-w-full px-0">
@@ -769,6 +771,23 @@ window.addEventListener('resize', updateVisibility);
     // themeTl.delay(1.5)
 
     })</script>
-   
+   <script>
+    const scrollDiv = document.getElementById('scrollDiv');
+
+    window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    const isDarkMode = document.documentElement.classList.contains('dark');
+
+    if (scrollPosition > 200) {
+        scrollDiv.classList.remove(isDarkMode ? 'dark:bg-opacity-50' : 'bg-opacity-50');
+        scrollDiv.classList.add(isDarkMode ? 'dark:bg-opacity-100' : 'bg-opacity-100');
+    } else {
+        scrollDiv.classList.remove(isDarkMode ? 'dark:bg-opacity-100' : 'bg-opacity-100');
+        scrollDiv.classList.add(isDarkMode ? 'dark:bg-opacity-50' : 'bg-opacity-50');
+    }
+});
+
+
+</script>
 	</body>
 </html>
