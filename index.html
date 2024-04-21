@@ -465,35 +465,35 @@
                             <li class="group relative">
                                 <a
                                     href="#home"
-                                    class=" mx-8 flex py-2  font-medium text-white group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6  lg:group-hover:text-opacity-50 duration-500">
+                                    class=" mx-8 flex py-2 text-base font-medium text-black group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 duration-500">
                                     Home
                                 </a>
                             </li>
                             <li class="group relative">
                                 <a
                                     href="#about"
-                                    class=" mx-8 flex py-2  font-medium text-white group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6  lg:group-hover:text-opacity-50 duration-500 xl:ml-10">
+                                    class=" mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 duration-500 xl:ml-10">
                                     About
                                 </a>
                             </li>
                             <li class="group relative">
                                 <a
                                     href="#pricing"
-                                    class=" mx-8 flex py-2  font-medium text-white group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6  lg:group-hover:text-opacity-50 duration-500 xl:ml-10">
+                                    class=" mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 duration-500 xl:ml-10">
                                     Pricing
                                 </a>
                             </li>
                             <li class="group relative">
                                 <a
                                     href="#team"
-                                    class=" mx-8 flex py-2  font-medium text-white group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6  lg:group-hover:text-opacity-50 duration-500 xl:ml-10">
+                                    class=" mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 duration-500 xl:ml-10">
                                     Team
                                 </a>
                             </li>
                             <li class="group relative">
                                 <a
                                     href="#contact"
-                                    class=" mx-8 flex py-2  font-medium text-white group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6  lg:group-hover:text-opacity-50 duration-500 xl:ml-10">
+                                    class=" mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 duration-500 xl:ml-10">
                                     Contact
                                 </a>
                             </li>     
@@ -506,7 +506,7 @@
                             <li class="group relative">
                                 <a
                                     href="mailto:hello@trick.com"
-                                    class=" mx-8 flex py-2 text-base font-medium text-black group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-opacity-50 duration-500">
+                                    class=" mx-8 flex py-2 text-base font-medium text-black group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 duration-500">
                                     <div class="flex gap-2 text-white">
                                         <i class="bi bi-envelope-fill "></i><span>hello@trick.com</span>
                                        </div>
@@ -515,7 +515,7 @@
                             <li class="group relative">
                                 <a
                                     href="tel:01012877474"
-                                    class=" mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-opacity-50 duration-500 xl:ml-10">
+                                    class=" mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 duration-500 xl:ml-10">
                                     <div class="flex gap-2 text-white">
                                         <i class="bi bi-telephone-fill"></i><span>+01012877474</span>
                                        </div>
@@ -524,7 +524,7 @@
                             </li>
                             <li class="group relative">
 
-                                    <div class="flex gap-2 text-white  mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-opacity-50 duration-500 xl:ml-10">
+                                    <div class="flex gap-2 text-white  mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 duration-500 xl:ml-10">
                                         <i class="bi bi-geo-alt-fill text-white"></i><span class="text-white">Egypt</span>
                                     </div>
                                     
@@ -618,7 +618,8 @@
       // toggle icons inside button
       themeToggleDarkIcon.classList.toggle("hidden");
       themeToggleLightIcon.classList.toggle("hidden");
-      
+      themeMobileToggleDarkIcon.classList.toggle("hidden");
+      themeMobileToggleLightIcon.classList.toggle("hidden");
 
       // if set via local storage previously
       if (localStorage.getItem("color-theme")) {
@@ -644,7 +645,8 @@
     var themeMobileToggleBtn = document.getElementById("theme-mobile-toggle");
     themeMobileToggleBtn.addEventListener("click", function () {
       // toggle icons inside button
-     
+      themeToggleDarkIcon.classList.toggle("hidden");
+      themeToggleLightIcon.classList.toggle("hidden");
       themeMobileToggleDarkIcon.classList.toggle("hidden");
       themeMobileToggleLightIcon.classList.toggle("hidden");
 
