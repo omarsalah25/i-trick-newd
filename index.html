@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 	<head>
-
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>I-Trick</title>
@@ -53,6 +52,7 @@
 				document.documentElement.classList.remove("dark")
 			}
 		</script>
+      
 	</head>
 
 
@@ -62,11 +62,14 @@
     <body
       class="bg-white dark:bg-main-background transition items-center duration-1000 relative flex min-h-screen flex-col justify-center overflow-y-scroll py-6 sm:py-12"
     >
+    <!-- Start Body Background  -->
     <div class="background-container">
         <div class="background1 blur-layer "></div>
         <div class="background2 blur-layer "></div>
     </div>
+    <!-- End Body Background  -->
 
+        <!-- Start Side menu -->
     <section class="fullpage-menu overflow-hidden  "  >
         <div class="fullpage-menu-inner ">
             <div class="menu-bg blur-lg bg-white dark:bg-black "></div>
@@ -79,7 +82,7 @@
                     <li><a href="javascript:void(0)"><span data-clip="Accepted Devices" class="text-black dark:text-white  font-poppins">Accepted Devices</span></a></li>
                     <!-- <li><a href="signin.html"><span data-clip="Cart" class="text-black dark:text-white">Cart</span></a></li> -->
                     <li><a href="javascript:void(0)" class="w-60 text-center font-poppins "><span data-clip="Login" 
-                        class=" p-2 text-xl font-semi-bold bg-custom-700 rounded-full  text-black  dark:text-white duration-500  ">Login</span></a></li>
+                        class=" p-2 text-xl font-semi-bold bg-custom-700 rounded-full  text-white  dark:text-white  duration-500  ">Login</span></a></li>
                   
                         <!-- <li><a href="javascript:void(0)"><span data-clip="Contact" class="text-black dark:text-white  font-poppins">Contact</span></a></li> -->
                      
@@ -125,6 +128,9 @@
             </nav>
         </div>
     </section>
+        <!-- End Side menu -->
+
+    <!-- Start Navbar -->
 		<div
 			class="container sticky z-20 mx-auto -top-1 duration-500  lg:top-0 lg:px-0 bg-white dark:bg-black dark:bg-opacity-50 rounded-3xl shadow-lg  ">
 			<div class="relative mx:0 lg:-mx-4 flex items-center p-2 lg:p-0 ">
@@ -205,14 +211,14 @@
                                     <li class="group relative">
                                         <a
                                             href="signin.html"
-                                            class="ud-menu-scroll bg-custom-700 rounded-full p-4 py-2 mx-2 flex  text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex   lg:text-black lg:group-hover:text-white duration-500 dark:lg:group-hover:text-opacity-50  ">
+                                            class="ud-menu-scroll bg-custom-700 rounded-full p-4 py-2 mx-2 flex  text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex   lg:text-white lg:group-hover:text-opacity-50 duration-500 dark:lg:group-hover:text-opacity-50  ">
                                             Login
                                         </a>
                                     </li>
                                     <li class="group relative">
                                         <a
                                             href="signin.html"
-                                            class="ud-menu-scroll bg-custom-700 rounded-full p-4 py-2 mx-2 flex  text-base font-medium text-dark group-hover:text-primary dark:text-white  lg:mr-0 lg:inline-flex   lg:text-black lg:group-hover:text-white duration-500 dark:lg:group-hover:text-opacity-50  ">
+                                            class="ud-menu-scroll bg-custom-700 rounded-full p-4 py-2 mx-2 flex  text-base font-medium text-dark group-hover:text-primary dark:text-white  lg:mr-0 lg:inline-flex   lg:text-white lg:group-hover:text-opacity-50 duration-500 dark:lg:group-hover:text-opacity-50  ">
                                             Register
                                         </a>
                                     </li>
@@ -230,12 +236,14 @@
                
 			</div>
 		</div>
+    <!-- End Navbar -->
+
 
 		
-        <div class="container " >
-            <div class="w-full bg-transparent dark:text-white rounded-lg p-6 mt-4">
-               <div class="flex flex-col md:flex-row justify-center items-center" id="#">
-    
+        <div class="container py-16 " >
+            <!-- Start Home section -->
+                <div class="container flex flex-col md:flex-row justify-center items-center p-5 mt-4" id="#">
+                <!-- title -->
                 <div class="order-2 lg:order-1 md:order-1 ">
                     <h2 class="lg:text-7xl text-5xl  font-poppins font-bold py-5 text-custom-700 dark:text-white">Smartness, That You Deserve.</h2>
                     <p class="text-md lg:text-2xl text-gray-400 font-poppins py-5">Trick gives many services to you like payment, social media accounts and many other services.</p>
@@ -244,12 +252,16 @@
                     <button class="text-sm lg:text-2xl shadow-lg  font-poppins text-white rounded-full font-normal w-full bg-transparent border border-black dark:border-white "><div class="flex gap-3 items-center lg:p-5 p-3 rounded-full text-center hover:-translate-y-1 hover:-translate-x-1 duration-500 justify-center text-black dark:text-white font-semibold">Our Products</div></button>
                     </div>
                 </div>  
+                <!-- img -->
                 <div class="order-1 lg:order-2 md:order-2 mb-8 md:mb-0 md:mr-8 ">
                     <img class="w-full float-right hover:rotate-15 duration-500	" src="/img/trick-hero-pic.png" alt="" srcset="">
                 </div>                 
-</div>
-            </div>
-            <div class="container  bg-transparent dark:text-white rounded-lg p-6 mt-4 flex flex-col items-center justify-center">
+                </div>
+            <!-- End Home section -->
+
+            <!-- Start About us section-->
+            <div class="container  bg-transparent dark:text-white rounded-lg p-5 mt-4 flex flex-col items-center justify-center">
+                <!-- title -->
                 <div class="container ">
                   <h1 class="text-custom-700 dark:text-white lg:text-7xl text-5xl font-poppins font-bold mb-5">About Us</h1>
                   <p class="text-md lg:text-2xl text-gray-400 font-poppins  w-full sm:w-1/2 md:w-2/3 lg:w-1/2 xl:w-1/2 ">
@@ -258,7 +270,8 @@
                     based on a specialized team keen to provide you with the service always in the best way.
                   </p>
                 </div>
-            
+                
+               <!-- content -->
                 <div class="container grid grid-cols-1 justify-items-center xl:grid-cols-3 gap-5 mt-10 rounded-lg">
                   <!-- Column 1 -->
                   <div class="mt-10 bg-gray-200 bg-opacity-50 dark:bg-black dark:bg-opacity-50 h-80 md:h-auto lg:h-auto xl:h-auto w-full  lg:w-96 xl:w-96 p-6 rounded-lg">
@@ -313,23 +326,128 @@
             
             
                 </div>
-              </div>
-            <div class="w-full bg-transparent dark:text-white rounded-lg p-6 mt-4">
-                <div class="flex justify-center items-center">
-                    <a
-                        href="#products"
-                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                        <h5
-                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Quote by Agent K
-                        </h5>
-                        <p class="font-normal text-gray-700 dark:text-gray-400">
-                            "A person is smart. People are dumb, panicky, dangerous animals and
-                            you know it." - Agent K, Men in Black
-                        </p>
-                    </a>
-                </div>
             </div>
+            <!-- End About us section -->
+
+            <!-- Start our products section -->
+            <div class="container  bg-transparent dark:text-white rounded-lg p-5 mt-4 flex flex-col items-center justify-center">
+                <!-- title -->
+                <div class="container flex justify-between items-center ">
+                  <h1 class="text-custom-700 dark:text-white lg:text-7xl text-5xl font-poppins font-bold mb-5">Our Products</h1>
+                  <div class="hidden xl:block mt-5 p-3 w-36 font-medium text-sm  bg-custom-700 rounded-full  text-white hover:text-opacity-50  dark:text-white dark:hover:text-opacity-50  duration-500 justify-center flex" >
+                    <button>Show All Products</button>
+                </div>
+                </div>
+                <!-- content -->
+                <div class="container grid grid-cols-1 justify-items-center xl:grid-cols-2 gap-5 mt-10 rounded-lg justify-items-stretch">
+                    <!-- main card -->
+                        <div class="flex items-center flex-col w-full">
+                        <!-- img -->
+                            <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 w-full xl:w-96 xl:p-16 p-10 rounded-lg flex justify-center items-center">
+                            <img class="max-w-full max-h-full" src="/img/trick-black-card.png" alt="" srcset="">
+                            </div>    
+                        <!-- content -->
+                        <div class=" py-2 flex flex-col gap-3 w-full">
+                            <div class="flex justify-between">
+                                <div class="flex flex-col w-full gap-2">
+                                    <div class="flex justify-between">
+                                        <h1 class="text-xl font-semi-bold">NFC Business Card Black</h1>
+                                            <!-- <span>100</span> -->
+                                    </div>                        
+                                        <h1 class="text-sm text-gray-400">Trick NFC Business Card ( Black Color )</h1>
+                                    <div class="flex gap-2 text-custom-700 text-xl font-bold"><span>L.E</span><span>200</span></div>
+                                </div>
+                            </div>
+                            <div class="p-1 w-full font-medium text-lg  bg-custom-700 rounded-full  text-white  dark:text-white dark:hover:text-opacity-50 hover:text-opacity-50   duration-500 justify-center flex" >
+                                <button class="w-full">Add to cart</button>
+                            </div>                    
+                        </div>
+                         </div>
+                    <!-- main card -->
+                    <!-- side cards -->
+                    <div class="flex flex-col justify-between "> 
+                        <div class="flex gap-2">
+                            <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 w-36 h-28 xl:h-32 rounded-lg p-5"
+                            >
+                            <img class="w-full" src="/img/trick-black-card.png" alt="" srcset="">
+                        </div>
+                            <div class=" py-2 flex flex-col gap-3 w-full">
+                                <div class="flex justify-between">
+                                    <div class="flex flex-col w-full gap-2">
+                                        <div class="flex justify-between">
+                                            <h1 class="text-sm xl:text-lg font-semi-bold">NFC Business Card Black</h1>
+                                              <!-- <span>100</span> -->
+                                        </div>               
+                                        <h1 class="text-xs xl:text-sm text-gray-400">Trick NFC Business Card ( Black Color )</h1>
+                                        <div class="flex gap-2 text-custom-700 text-sm xl:text-lg font-bold"><span>L.E</span><span>200</span></div>
+                                    </div>
+                                </div>
+                                <div class="p-1 w-full font-medium text-sm  bg-custom-700 rounded-full  text-white  dark:text-white dark:hover:text-opacity-50 hover:text-opacity-50   duration-500 justify-center flex" >
+                                    <button class="w-full">Add to cart</button>
+                                </div>
+                               
+                            </div>
+    
+    
+                        </div>
+                        <div class="flex gap-2">
+                            <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 w-36 h-28 xl:h-32 rounded-lg p-5"
+                            >
+                            <img class="w-full" src="/img/trick-black-card.png" alt="" srcset="">
+                        </div>
+                            <div class=" py-2 flex flex-col gap-3 w-full">
+                                <div class="flex justify-between">
+                                    <div class="flex flex-col w-full gap-2">
+                                        <div class="flex justify-between">
+                                            <h1 class="text-sm xl:text-lg font-semi-bold">NFC Business Card Black</h1>
+                                              <!-- <span>100</span> -->
+                                        </div>               
+                                        <h1 class="text-xs xl:text-sm text-gray-400">Trick NFC Business Card ( Black Color )</h1>
+                                        <div class="flex gap-2 text-custom-700 text-sm xl:text-lg font-bold"><span>L.E</span><span>200</span></div>
+                                    </div>
+                                </div>
+                                <div class="p-1 w-full font-medium text-sm  bg-custom-700 rounded-full  text-white  dark:text-white dark:hover:text-opacity-50 hover:text-opacity-50   duration-500 justify-center flex" >
+                                    <button class="w-full">Add to cart</button>
+                                </div>
+                               
+                            </div>
+    
+    
+                        </div>
+                        <div class="flex gap-2">
+                            <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 w-36 h-28 xl:h-32 rounded-lg p-5"
+                            >
+                            <img class="w-full" src="/img/trick-black-card.png" alt="" srcset="">
+                        </div>
+                            <div class=" py-2 flex flex-col gap-3 w-full">
+                                <div class="flex justify-between">
+                                    <div class="flex flex-col w-full gap-2">
+                                        <div class="flex justify-between">
+                                            <h1 class="text-sm xl:text-lg font-semi-bold">NFC Business Card Black</h1>
+                                              <!-- <span>100</span> -->
+                                        </div>               
+                                        <h1 class="text-xs xl:text-sm text-gray-400">Trick NFC Business Card ( Black Color )</h1>
+                                        <div class="flex gap-2 text-custom-700 text-sm xl:text-lg font-bold"><span>L.E</span><span>200</span></div>
+                                    </div>
+                                </div>
+                                <div class="p-1 w-full font-medium text-sm  bg-custom-700 rounded-full  text-white  dark:text-white dark:hover:text-opacity-50 hover:text-opacity-50  duration-500 justify-center flex" >
+                                    <button class="w-full">Add to cart</button>
+                                </div>
+                               
+                            </div>
+    
+    
+                        </div>
+                    </div>
+                    <!-- show all products mobile button -->
+                    <div class="block xl:hidden mt-5 p-3 w-36 font-medium text-sm  bg-custom-700 rounded-full  text-white hover:text-opacity-50  dark:text-white dark:hover:text-opacity-50  duration-500 justify-center flex" >
+                        <button>Show All Products</button>
+                    </div>
+                </div>               
+            </div>
+            <!-- End our products section-->
+
+
             <div class="w-full bg-transparent dark:text-white rounded-lg p-6 mt-4">
                 <div class="flex justify-center items-center">
                     <a
@@ -547,5 +665,6 @@ window.addEventListener('resize', updateVisibility);
     // themeTl.delay(1.5)
 
     })</script>
+   
 	</body>
 </html>
