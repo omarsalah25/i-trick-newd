@@ -103,6 +103,23 @@ body {
 }
 /* navbar */
 
+/* footer  */
+.footer-logo {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	background-image: url("/img/trick-logo-white.png");
+}
+
+.dark .footer-logo {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	background-image: url("/img/trick-logo-white.png");
+}
+
+/* footer  */
+
 .menu-toggle {
 	background: transparent;
 	border: none;
