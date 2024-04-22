@@ -19,7 +19,8 @@ body {
 }
 
 .background1,
-.background2 {
+.background2,
+.background3 {
 	position: absolute;
 	top: 0;
 	background-image: url("/img/trick-home.png");
@@ -36,6 +37,11 @@ body {
 	left: 450px;
 	width: 45% !important;
 }
+.background3 {
+	top: 0;
+	right: 900px;
+	width: 60% !important;
+}
 
 /* .blur-layer {
 	filter: blur(50px);
@@ -49,6 +55,10 @@ body {
 .background2 {
 	z-index: -2;
 	animation: translate2 17s infinite alternate ease-in-out;
+}
+.background3 {
+	z-index: -1;
+	animation: translate3 30s infinite alternate ease-in-out;
 }
 
 @keyframes translate1 {
@@ -88,6 +98,15 @@ body {
 	}
 }
 
+@keyframes translate3 {
+	0% {
+		transform: translate(-50%, -50%);
+	}
+	100% {
+		transform: translate(-50%, 50%);
+	}
+}
+
 /* navbar */
 .navbar-logo {
 	background-repeat: no-repeat;
@@ -102,6 +121,38 @@ body {
 	background-image: url("/img/trick-logo-white.png");
 }
 /* navbar */
+
+/* modal */
+@keyframes modal-enter {
+	0% {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+@keyframes modal-close {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+}
+
+.animate-modal-enter {
+	animation: modal-enter 0.3s ease-out;
+}
+.animate-modal-close {
+	animation: modal-close 0.3s ease-out;
+}
+/* modal */
 
 /* footer  */
 .footer-logo {

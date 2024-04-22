@@ -67,6 +67,8 @@
     <div class="background-container">
         <div class="background1 blur-layer "></div>
         <div class="background2 blur-layer "></div>
+        <div class="background3 blur-layer "></div>
+
     </div>
     <!-- End Body Background  -->
 
@@ -146,11 +148,10 @@
                             <div>
                             <ul class=" flex 2xl:ml-20 items-center">
                                 <li class="group relative">
-                                    <a
-                                        href="signin.html"
-                                        class="ud-menu-scroll relative mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700  xl:ml-10 duration-500">
-                                        <i class="bi bi-cart4 p-0 text-3xl mb-1 text-custom-700 "></i><span class="absolute top-1.5 -left-2 px-2 py-0 rounded-full bg-custom-700 text-white ">0</span>
-                                    </a>
+                                    <button id="openModalButton" class="ud-menu-scroll relative mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 xl:ml-10 duration-500">
+                                        <i class="bi bi-cart4 p-0 text-3xl mb-1 text-custom-700 "></i>
+                                        <span class="absolute top-1.5 -left-2 px-2 py-0 rounded-full bg-custom-700 text-white ">0</span>
+                                    </button>
                                 </li>
                                 <li class="group relative">
                                     <a
@@ -181,6 +182,121 @@
         </div>
     </div>
   <!-- End Navbar -->
+
+<!-- Modal Background -->
+<!-- Modal Background -->
+
+<!-- Modal Background -->
+    <div id="cartModalBackground"
+        class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black bg-opacity-50  ">
+        <!-- Modal Content -->
+        <div class="modal bg-white dark:bg-black rounded-lg p-6 w-full max-w-xl ">
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold text-black dark:text-white">Your Cart</h2>
+                <!-- Close Button -->
+                <button id="closeModalButton" class="text-gray-500 hover:text-gray-700" aria-label="Close modal">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Cart Items -->
+            <ul class="divide-y divide-gray-200">
+                <!-- Sample Cart Item -->
+                <li class="py-2">
+                    <div class="flex gap-2">
+                        <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 w-36 h-28 xl:h-32 rounded-lg p-5"
+                        >
+                        <img class="w-full" src="/img/trick-black-card.png" alt="" srcset="">
+                    </div>
+                        <div class=" py-2 flex flex-col gap-5 w-full">
+                            <div class="flex justify-between">
+                                <div class="flex flex-col w-full gap-2">
+                                    <div class="flex justify-between">
+                                        <h1 class="text-sm xl:text-lg text-black dark:text-white font-semi-bold">NFC Business Card Black</h1>
+                                        <!-- <span>100</span> -->
+                                    </div>               
+                                    <h1 class="text-xs xl:text-sm text-gray-400">Trick NFC Business Card ( Black Color )</h1>
+                                    <div class="flex gap-2 text-custom-700 text-sm xl:text-lg font-bold"><span>L.E</span><span>200</span></div>
+                                </div>
+                            </div>
+                            
+                        
+                        </div>
+
+
+                    </div>
+                </li>
+
+                <li class="py-2">
+                    <div class="flex gap-2">
+                        <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 w-36 h-28 xl:h-32 rounded-lg p-5"
+                        >
+                        <img class="w-full" src="/img/trick-black-card.png" alt="" srcset="">
+                    </div>
+                        <div class=" py-2 flex flex-col gap-5 w-full">
+                            <div class="flex justify-between">
+                                <div class="flex flex-col w-full gap-2">
+                                    <div class="flex justify-between">
+                                        <h1 class="text-sm xl:text-lg text-black dark:text-white font-semi-bold">NFC Business Card Black</h1>
+                                        <!-- <span>100</span> -->
+                                    </div>               
+                                    <h1 class="text-xs xl:text-sm text-gray-400">Trick NFC Business Card ( Black Color )</h1>
+                                    <div class="flex gap-2 text-custom-700 text-sm xl:text-lg font-bold"><span>L.E</span><span>200</span></div>
+                                </div>
+                            </div>
+                            
+                        
+                        </div>
+
+
+                    </div>
+                </li>
+
+                <li class="py-2">
+                    <div class="flex gap-2">
+                        <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 w-36 h-28 xl:h-32 rounded-lg p-5"
+                        >
+                        <img class="w-full" src="/img/trick-black-card.png" alt="" srcset="">
+                    </div>
+                        <div class=" py-2 flex flex-col gap-5 w-full">
+                            <div class="flex justify-between">
+                                <div class="flex flex-col w-full gap-2">
+                                    <div class="flex justify-between">
+                                        <h1 class="text-sm xl:text-lg text-black dark:text-white font-semi-bold">NFC Business Card Black</h1>
+                                        <!-- <span>100</span> -->
+                                    </div>               
+                                    <h1 class="text-xs xl:text-sm text-gray-400">Trick NFC Business Card ( Black Color )</h1>
+                                    <div class="flex gap-2 text-custom-700 text-sm xl:text-lg font-bold"><span>L.E</span><span>200</span></div>
+                                </div>
+                            </div>
+                            
+                        
+                        </div>
+
+
+                    </div>
+                </li>
+
+                <!-- Add more cart items here -->
+            </ul>
+            <!-- Cart Total -->
+            <div class="mt-6 flex justify-between items-center">
+                <!-- Total Content -->
+            </div>
+            <!-- Checkout Button -->
+            <button class="mt-6 w-full bg-custom-600 hover:bg-custom-700 text-white font-semibold py-2 rounded duration-500">
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+
+
+
             <!-- Start Side menu -->
             <section class="fullpage-menu overflow-hidden min-h-screen z-10 "  >
                 <div class="fullpage-menu-inner ">
@@ -851,6 +967,34 @@ function scrollToElement(element, offset) {
     });
 }
 
+</script>
+
+
+<script>
+    // Get references to modal and buttons
+    const modalBackground = document.getElementById('cartModalBackground');
+    const openModalButton = document.getElementById('openModalButton');
+    const closeModalButton = document.getElementById('closeModalButton');
+
+    // Function to open modal
+    function openModal() {
+        modalBackground.classList.remove('hidden'); 
+        modalBackground.querySelector('.modal').classList.remove('animate-modal-close');
+        modalBackground.querySelector('.modal').classList.add('animate-modal-enter');
+    }
+
+    // Function to close modal
+    function closeModal() {
+        modalBackground.querySelector('.modal').classList.remove('animate-modal-enter');
+        modalBackground.querySelector('.modal').classList.add('animate-modal-close');
+        setTimeout(() => {
+            modalBackground.classList.add('hidden');
+        }, 300); // Ensure modal is hidden after transition
+    }
+
+    // Event listeners
+    openModalButton.addEventListener('click', openModal);
+    closeModalButton.addEventListener('click', closeModal);
 </script>
 
 	</body>
