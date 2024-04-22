@@ -208,7 +208,7 @@
                 <!-- Sample Cart Item -->
                 <li class="py-2">
                     <div class="flex gap-2">
-                        <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 w-36 h-28 xl:h-32 rounded-lg p-5"
+                        <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 w-36 max-h-28 xl:h-32 rounded-lg p-5"
                         >
                         <img class="w-full" src="/img/trick-black-card.png" alt="" srcset="">
                     </div>
@@ -227,13 +227,31 @@
                         
                         </div>
 
+                        <div class="flex flex-col items-end text-black dark:text-white justify-around">
+                            <!-- Quantity Controls -->
+                            <div class="flex ">
+                                <button class="px-2 py-1 border border-gray-300 rounded-l">-</button>
+                            <span class="px-2 py-1 border border-gray-300">1</span>
+                            <button class="px-2 py-1 border border-gray-300 rounded-r">+</button>
+                            </div>
+                            <div>
+                                  <!-- Delete Icon -->
+                            <button class="px-1  rounded-full bg-red-500 text-white">
+                                <i   class="bi bi-trash" >
+                                </i>
+                            </button>
+                            </div>
+                            
+                          
+                        </div>
+
 
                     </div>
                 </li>
 
-                <li class="py-2">
+               <li class="py-2">
                     <div class="flex gap-2">
-                        <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 w-36 h-28 xl:h-32 rounded-lg p-5"
+                        <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 w-36 max-h-28 xl:h-32 rounded-lg p-5"
                         >
                         <img class="w-full" src="/img/trick-black-card.png" alt="" srcset="">
                     </div>
@@ -252,13 +270,32 @@
                         
                         </div>
 
+                        <div class="flex flex-col items-end text-black dark:text-white justify-around">
+                            <!-- Quantity Controls -->
+                            <div class="flex ">
+                                <button class="px-2 py-1 border border-gray-300 rounded-l">-</button>
+                            <span class="px-2 py-1 border border-gray-300">1</span>
+                            <button class="px-2 py-1 border border-gray-300 rounded-r">+</button>
+                            </div>
+                            <div>
+                                  <!-- Delete Icon -->
+                            <button class="px-1  rounded-full bg-red-500 text-white">
+                                <i   class="bi bi-trash" >
+                                </i>
+                            </button>
+                            </div>
+                            
+                          
+                        </div>
+
 
                     </div>
                 </li>
 
+
                 <li class="py-2">
                     <div class="flex gap-2">
-                        <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 w-36 h-28 xl:h-32 rounded-lg p-5"
+                        <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 w-36 max-h-28 xl:h-32 rounded-lg p-5"
                         >
                         <img class="w-full" src="/img/trick-black-card.png" alt="" srcset="">
                     </div>
@@ -275,6 +312,24 @@
                             </div>
                             
                         
+                        </div>
+
+                        <div class="flex flex-col items-end text-black dark:text-white justify-around">
+                            <!-- Quantity Controls -->
+                            <div class="flex ">
+                                <button class="px-2 py-1 border border-gray-300 rounded-l">-</button>
+                            <span class="px-2 py-1 border border-gray-300">1</span>
+                            <button class="px-2 py-1 border border-gray-300 rounded-r">+</button>
+                            </div>
+                            <div>
+                                  <!-- Delete Icon -->
+                            <button class="px-1  rounded-full bg-red-500 text-white">
+                                <i   class="bi bi-trash" >
+                                </i>
+                            </button>
+                            </div>
+                            
+                          
                         </div>
 
 
@@ -285,7 +340,10 @@
             </ul>
             <!-- Cart Total -->
             <div class="mt-6 flex justify-between items-center">
-                <!-- Total Content -->
+                <div  class="mt-6 flex justify-between items-center text-black dark:text-white">
+                    <span class="font-semibold">Total:</span>
+                    <span id="totalAmount"></span>
+                </div>
             </div>
             <!-- Checkout Button -->
             <button class="mt-6 w-full bg-custom-600 hover:bg-custom-700 text-white font-semibold py-2 rounded duration-500">
