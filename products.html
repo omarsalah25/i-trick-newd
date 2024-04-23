@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>I-Trick</title>
+		<link rel="icon" type="image/svg+xml" href="./assets/favicon/icon.svg" />
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+		<!-- Tailwind CSS with class strategy -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/css/style.css">
+		<script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+		<!-- Configure your strategy -->
+        <script>
+            tailwind.config = {
+              darkMode: ['class', '[class="dark"]'],
+
+      
+              theme: {
+                extend: {
+                  colors: {
+                    custom: {
+                      700: "#25AEBE",
+                      600: "#70B6BE",
+                    },
+                    main:{
+                      background:"#101010",
+                    },
+                    backgroundImage: {
+                      background: "linear-gradient(270deg, #111 4.16%, rgba(27, 27, 27, 0.00) 105.36%)",
+                      },
+                  },
+                },
+                fontFamily: {
+                    poppins: ['Poppins', 'sans-serif']
+      },
+      rotate:{
+        '15':'15deg',
+      }
+              },
+            };
+          </script>
+		<script>
+			if (
+				localStorage.getItem("color-theme") === "dark" ||
+				(!("color-theme" in localStorage) &&
+					window.matchMedia("(prefers-color-scheme: dark)").matches)
+			) {
+				document.documentElement.classList.add("dark")
+			} else {
+				document.documentElement.classList.remove("dark")
+			}
+		</script>
+        
+      
+	</head>
+
+
+
+      
+    </head>
+    <body
+      class="bg-white dark:bg-main-background transition items-center duration-1000 relative flex min-h-screen flex-col justify-center overflow-y-scroll"
+    >
+    <!-- Start Body Background  -->
+    <div class="background-container">
+        <div class="background1 blur-layer "></div>
+        <div class="background2 blur-layer "></div>
+    </div>
+    <!-- End Body Background  -->
+
+  <!-- Start Navbar -->
+  <div
+  id="scrollDiv"
+      class="container sticky z-20 mx-auto -top-1 duration-500  lg:top-0 lg:px-0 bg-white dark:bg-black dark:bg-opacity-50 rounded-3xl shadow-lg  ">
+      <div class="relative mx:0 lg:-mx-4 flex items-center p-2 lg:p-0 ">
+          <div class="w-60 max-w-full px-0">
+              <a href="index.html" class="block w-full">
+                  <div alt="logo" class="navbar-logo py-6"></div>
+              </a>
+          </div>
+          
+              <div class="flex w-full relative flex-row  px-4">
+                  <button
+                      id="burger"
+                      class="absolute  menu-toggle top-0 right-4 z-20 top-1/2 block -translate-y-1/2 rounded-lg px-5 py-[6px] ring-primary  hover:-translate-y-1/2 lg:hidden duration-500">
+                          <svg viewBox="0 0 12 10" class="hamburger" height="40px" width="40px">
+                              <path d="M10,2 L2,2" class="bar-1 stroke-black	dark:stroke-white" ></path>
+                              <path d="M2,5 L10,5" class="bar-2 stroke-black	dark:stroke-white"></path>
+                              <path d="M10,8 L2,8" class="bar-3 stroke-black	dark:stroke-white"></path>
+                          </svg>
+                  </svg>
+                  </button>
+                  <nav
+                      class="fixed -top-5 right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6">
+                      <div class="flex 2xl:ml-20 justify-between items-center ">
+
+                          <div>
+                          <ul class=" flex 2xl:ml-20  ">
+                              <li class="group relative">
+                                  <a
+                                      href="/"
+                                      class="ud-menu-scroll   mx-8 flex py-2 text-base font-medium text-black group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 duration-500">
+                                      Home
+                                  </a>
+                             </li>   
+                                           
+                              <li class="group relative">
+                                  <a
+                                      href="index.html#about"
+                                      class="ud-menu-scroll smooth-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 duration-500 xl:ml-10">
+                                      About Us
+                                  </a>
+                              </li>
+                              <li class="group relative">
+                                  <a
+                                      href="products.html"
+                                      class="ud-menu-scroll  mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 duration-500 xl:ml-10">
+                                      Products
+                                  </a>
+                              </li>     
+                              <li class="group relative">
+                                  <a
+                                      href="contact-us.html"
+                                      class="ud-menu-scroll mx-8  flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 duration-500 xl:ml-10">
+                                      Contact Us
+                                  </a>
+                              </li>
+                              <li class="group relative">
+                                  <a
+                                      href="accepted-devices.html"
+                                      class="ud-menu-scroll mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 duration-500 xl:ml-10">
+                                      Accepted Devices
+                                  </a>
+                              </li>
+
+                       
+                             
+
+                              
+                          </ul>
+                          </div>
+                          <div>
+                          <ul class=" flex 2xl:ml-20 items-center">
+                              <li class="group relative">
+                                  <a
+                                      href="signin.html"
+                                      class="ud-menu-scroll relative mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700  xl:ml-10 duration-500">
+                                      <i class="bi bi-cart4 p-0 text-3xl mb-1 text-custom-700 "></i><span class="absolute top-1.5 -left-2 px-2 py-0 rounded-full bg-custom-700 text-white ">0</span>
+                                  </a>
+                              </li>
+                              <li class="group relative">
+                                  <a
+                                      href="signin.html"
+                                      class="ud-menu-scroll bg-custom-700 rounded-full p-4 py-2 mx-2 flex  text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex   lg:text-white lg:group-hover:text-opacity-50 duration-500 dark:lg:group-hover:text-opacity-50  ">
+                                      Login
+                                  </a>
+                              </li>
+                              <li class="group relative">
+                                  <a
+                                      href="signin.html"
+                                      class="ud-menu-scroll bg-custom-700 rounded-full p-4 py-2 mx-2 flex  text-base font-medium text-dark group-hover:text-primary dark:text-white  lg:mr-0 lg:inline-flex   lg:text-white lg:group-hover:text-opacity-50 duration-500 dark:lg:group-hover:text-opacity-50  ">
+                                      Register
+                                  </a>
+                              </li>
+                             
+                              
+                          </ul>
+                      </div>
+                      </div>
+                  
+                  </nav>
+                  
+              </div>
+         
+          
+         
+      </div>
+  </div>
+<!-- End Navbar -->
+
+            <!-- Start Side menu -->
+            <section class="fullpage-menu overflow-hidden min-h-screen z-10 "  >
+                <div class="fullpage-menu-inner ">
+                    <div class="menu-bg blur-lg bg-white dark:bg-black "></div>
+                    <nav>
+                        <ul class="main-menu ">
+                           
+                            <li><a href="/"><span data-clip="Home" class="text-black dark:text-white font-poppins ">Home</span></a></li>
+                            <li><a href="products.html" ><span data-clip="Products" class="text-black dark:text-white  font-poppins">Products</span></a></li>
+                            <li><a href="about.html" ><span data-clip="About Us" class="text-black dark:text-white  font-poppins">About Us</span></a></li>
+                            <li><a href="contact-us.html"><span data-clip="Contact Us" class="text-black dark:text-white font-poppins">Contact Us</span></a></li>
+                            <li><a href="accepted-devices.html"><span data-clip="Accepted Devices" class="text-black dark:text-white  font-poppins">Accepted Devices</span></a></li>
+                            <!-- <li><a href="signin.html"><span data-clip="Cart" class="text-black dark:text-white">Cart</span></a></li> -->
+                            <li><a href="javascript:void(0)" class="w-60 text-center font-poppins "><span data-clip="Login" 
+                                class=" p-2 text-xl font-semi-bold bg-custom-700 rounded-full  text-white  dark:text-white  duration-500  ">Login</span></a></li>
+                          
+                                <li>
+                                    <div>
+                                        <button id="theme-mobile-toggle" type="button" class=" block lg:hidden fixed bottom-5 right-5 bg-gray-100 dark:bg-zinc-800 text-gray-400 rounded-lg text-sm p-2.5">
+                                            <svg id="theme-mobile-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                                            <svg id="theme-mobile-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4
+                                
+                                 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                        </button>
+                                    </div>
+                                </li>
+                                <!-- <li><a href="javascript:void(0)"><span data-clip="Contact" class="text-black dark:text-white  font-poppins">Contact</span></a></li> -->
+                             
+                             
+                                <!-- <li>
+                                    <div class="flex justify-start items-center w-full h-20  ">
+                                        <div
+                                            class=" w-72 h-14 pl-8 pr-5 mr-8 lg:mr-20  bg-white transition  drop-shadow-lg	 dark:bg-neutral-900 rounded-3xl justify-end items-center gap-6 inline-flex "
+                                            id="theme-mobile-toggle"
+                                        >
+                                
+                                            <div
+                                            class=" text-gray-500  text-base font-semi-bold text-xl  text-opacity-50 text-base font-normal font-['Poppins'] leading-10"
+                                            >
+                                            Dark
+                                            </div>
+                                        
+                                            <div
+                                            class="w-full h-8 relative rounded-full pt-0.5 px-1 border border-custom-700 bg-white dark:bg-black relative transition  duration-500 ease-in focus:outline-none focus:ring-2 focus:ring-custom-700 dark:focus:ring-custom-600 dark:focus:border-custom-700 focus:border-transparent"
+                                            >
+                                            <div
+                                            id="theme-mobile-toggle-dark-icon"
+                                            class="hidden rounded-full w-6 h-6 bg-custom-700  relative float-right dark:float-left pointer-events-none transition  duration-1000 ease-in"
+                                        ></div>
+                                            <div
+                                                id="theme-mobile-toggle-light-icon"
+                                                class="hidden rounded-full w-6 h-6 bg-custom-700  relative float-right dark:float-left  pointer-events-none transition  duration-1000 ease-in"
+                                            ></div>
+                                            
+                                            </div>
+                                            <div
+                                            class=" text-gray-500  text-opacity-50  text-base font-semi-bold text-xl font-['Poppins'] leading-10"
+                                        >
+                                            Light
+                                        </div>
+                                        </div>
+                                    </div>
+                               
+                              </li> -->
+        
+                        </ul>
+                        
+                    </nav>
+                </div>
+            </section>
+                <!-- End Side menu -->
+
+		
+        <div class="container pt-16 " >
+     
+
+          
+
+            <!-- Start our products section -->
+            <div id="products" class="container   bg-transparent dark:text-white rounded-lg p-5 mt-4 flex flex-col items-center justify-center">
+                <!-- title -->
+              
+                <!-- content -->
+                <div class="container grid grid-cols-2  md:grid-cols-2 justify-items-center xl:grid-cols-3 gap-5 mt-10 rounded-lg justify-items-stretch">
+                    <!-- main cards -->
+                    
+                        <div class="flex items-center flex-col max-w-96">
+                        <!-- img -->
+                            <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 max-w-96 xl:w-96 xl:p-16 p-10 rounded-t-lg flex justify-center items-center">
+                            <img class="max-w-full max-h-full" src="/img/trick-black-card.png" alt="" srcset="">
+                            </div>    
+                        <!-- content -->
+                        <div class=" py-2 flex flex-col gap-3 w-full">
+                            <div class="flex justify-between">
+                                <div class="flex flex-col w-full gap-2">
+                                    <div class="flex justify-between items-center">
+                                        <h1 class="text-xl font-semi-bold">NFC Business Card Black</h1>
+                                            <!-- <span>100</span> -->
+                                    </div>                        
+                                        <h1 class="text-sm text-gray-400">Trick NFC Business Card ( Black Color )</h1>
+                                    <div class="flex gap-2 text-custom-700 text-xl font-bold"><span>L.E</span><span>200</span></div>
+                                </div>
+                            </div>
+                            <div class="p-1 w-full font-medium text-lg  bg-custom-700 rounded-full  text-white  dark:text-white dark:hover:text-opacity-50 hover:text-opacity-50   duration-500 justify-center flex" >
+                                <button class="w-full">Add to cart</button>
+                            </div>                    
+                        </div>
+                        </div>
+                        <div class="flex items-center flex-col max-w-96">
+                        <!-- img -->
+                            <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 max-w-96 xl:w-96 xl:p-16 p-10 rounded-t-lg flex justify-center items-center">
+                            <img class="max-w-full max-h-full" src="/img/trick-black-card.png" alt="" srcset="">
+                            </div>    
+                        <!-- content -->
+                        <div class=" py-2 flex flex-col gap-3 w-full">
+                            <div class="flex justify-between">
+                                <div class="flex flex-col w-full gap-2">
+                                    <div class="flex justify-between">
+                                        <h1 class="text-xl font-semi-bold">NFC Business Card Black</h1>
+                                            <!-- <span>100</span> -->
+                                    </div>                        
+                                        <h1 class="text-sm text-gray-400">Trick NFC Business Card ( Black Color )</h1>
+                                    <div class="flex gap-2 text-custom-700 text-xl font-bold"><span>L.E</span><span>200</span></div>
+                                </div>
+                            </div>
+                            <div class="p-1 w-full font-medium text-lg  bg-custom-700 rounded-full  text-white  dark:text-white dark:hover:text-opacity-50 hover:text-opacity-50   duration-500 justify-center flex" >
+                                <button class="w-full">Add to cart</button>
+                            </div>                    
+                        </div>
+                        </div>
+                        <div class="flex items-center flex-col max-w-96">
+                        <!-- img -->
+                            <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 max-w-96 xl:w-96 xl:p-16 p-10 rounded-t-lg flex justify-center items-center">
+                            <img class="max-w-full max-h-full" src="/img/trick-black-card.png" alt="" srcset="">
+                            </div>    
+                        <!-- content -->
+                        <div class=" py-2 flex flex-col gap-3 w-full">
+                            <div class="flex justify-between">
+                                <div class="flex flex-col w-full gap-2">
+                                    <div class="flex justify-between">
+                                        <h1 class="text-xl font-semi-bold">NFC Business Card Black</h1>
+                                            <!-- <span>100</span> -->
+                                    </div>                        
+                                        <h1 class="text-sm text-gray-400">Trick NFC Business Card ( Black Color )</h1>
+                                    <div class="flex gap-2 text-custom-700 text-xl font-bold"><span>L.E</span><span>200</span></div>
+                                </div>
+                            </div>
+                            <div class="p-1 w-full font-medium text-lg  bg-custom-700 rounded-full  text-white  dark:text-white dark:hover:text-opacity-50 hover:text-opacity-50   duration-500 justify-center flex" >
+                                <button class="w-full">Add to cart</button>
+                            </div>                    
+                        </div>
+                        </div>
+
+                    <!-- main cards -->
+
+                    <div class="flex items-center flex-col max-w-96">
+                        <!-- img -->
+                            <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 max-w-96 xl:w-96 xl:p-16 p-10 rounded-t-lg flex justify-center items-center">
+                            <img class="max-w-full max-h-full" src="/img/trick-black-card.png" alt="" srcset="">
+                            </div>    
+                        <!-- content -->
+                        <div class=" py-2 flex flex-col gap-3 w-full">
+                            <div class="flex justify-between">
+                                <div class="flex flex-col w-full gap-2">
+                                    <div class="flex justify-between">
+                                        <h1 class="text-xl font-semi-bold">NFC Business Card Black</h1>
+                                            <!-- <span>100</span> -->
+                                    </div>                        
+                                        <h1 class="text-sm text-gray-400">Trick NFC Business Card ( Black Color )</h1>
+                                    <div class="flex gap-2 text-custom-700 text-xl font-bold"><span>L.E</span><span>200</span></div>
+                                </div>
+                            </div>
+                            <div class="p-1 w-full font-medium text-lg  bg-custom-700 rounded-full  text-white  dark:text-white dark:hover:text-opacity-50 hover:text-opacity-50   duration-500 justify-center flex" >
+                                <button class="w-full">Add to cart</button>
+                            </div>                    
+                        </div>
+                    </div>
+                    <div class="flex items-center flex-col max-w-96">
+                        <!-- img -->
+                            <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 max-w-96 xl:w-96 xl:p-16 p-10 rounded-t-lg flex justify-center items-center">
+                            <img class="max-w-full max-h-full" src="/img/trick-black-card.png" alt="" srcset="">
+                            </div>    
+                        <!-- content -->
+                        <div class=" py-2 flex flex-col gap-3 w-full">
+                            <div class="flex justify-between">
+                                <div class="flex flex-col w-full gap-2">
+                                    <div class="flex justify-between">
+                                        <h1 class="text-xl font-semi-bold">NFC Business Card Black</h1>
+                                            <!-- <span>100</span> -->
+                                    </div>                        
+                                        <h1 class="text-sm text-gray-400">Trick NFC Business Card ( Black Color )</h1>
+                                    <div class="flex gap-2 text-custom-700 text-xl font-bold"><span>L.E</span><span>200</span></div>
+                                </div>
+                            </div>
+                            <div class="p-1 w-full font-medium text-lg  bg-custom-700 rounded-full  text-white  dark:text-white dark:hover:text-opacity-50 hover:text-opacity-50   duration-500 justify-center flex" >
+                                <button class="w-full">Add to cart</button>
+                            </div>                    
+                        </div>
+                    </div>
+                    <div class="flex items-center flex-col max-w-96">
+                        <!-- img -->
+                            <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 max-w-96 xl:w-96 xl:p-16 p-10 rounded-t-lg flex justify-center items-center">
+                            <img class="max-w-full max-h-full" src="/img/trick-black-card.png" alt="" srcset="">
+                            </div>    
+                        <!-- content -->
+                        <div class=" py-2 flex flex-col gap-3 w-full">
+                            <div class="flex justify-between">
+                                <div class="flex flex-col w-full gap-2">
+                                    <div class="flex justify-between">
+                                        <h1 class="text-xl font-semi-bold">NFC Business Card Black</h1>
+                                            <!-- <span>100</span> -->
+                                    </div>                        
+                                        <h1 class="text-sm text-gray-400">Trick NFC Business Card ( Black Color )</h1>
+                                    <div class="flex gap-2 text-custom-700 text-xl font-bold"><span>L.E</span><span>200</span></div>
+                                </div>
+                            </div>
+                            <div class="p-1 w-full font-medium text-lg  bg-custom-700 rounded-full  text-white  dark:text-white dark:hover:text-opacity-50 hover:text-opacity-50   duration-500 justify-center flex" >
+                                <button class="w-full">Add to cart</button>
+                            </div>                    
+                        </div>
+                    </div>
+                    <!-- main cards -->
+
+
+                    <!-- main cards -->
+
+                    <div class="flex items-center flex-col max-w-96">
+                        <!-- img -->
+                            <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 max-w-96 xl:w-96 xl:p-16 p-10 rounded-t-lg flex justify-center items-center">
+                            <img class="max-w-full max-h-full" src="/img/trick-black-card.png" alt="" srcset="">
+                            </div>    
+                        <!-- content -->
+                        <div class=" py-2 flex flex-col gap-3 w-full">
+                            <div class="flex justify-between">
+                                <div class="flex flex-col w-full gap-2">
+                                    <div class="flex justify-between">
+                                        <h1 class="text-xl font-semi-bold">NFC Business Card Black</h1>
+                                            <!-- <span>100</span> -->
+                                    </div>                        
+                                        <h1 class="text-sm text-gray-400">Trick NFC Business Card ( Black Color )</h1>
+                                    <div class="flex gap-2 text-custom-700 text-xl font-bold"><span>L.E</span><span>200</span></div>
+                                </div>
+                            </div>
+                            <div class="p-1 w-full font-medium text-lg  bg-custom-700 rounded-full  text-white  dark:text-white dark:hover:text-opacity-50 hover:text-opacity-50   duration-500 justify-center flex" >
+                                <button class="w-full">Add to cart</button>
+                            </div>                    
+                        </div>
+                    </div>
+                    <div class="flex items-center flex-col max-w-96">
+                        <!-- img -->
+                            <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 max-w-96 xl:w-96 xl:p-16 p-10 rounded-t-lg flex justify-center items-center">
+                            <img class="max-w-full max-h-full" src="/img/trick-black-card.png" alt="" srcset="">
+                            </div>    
+                        <!-- content -->
+                        <div class=" py-2 flex flex-col gap-3 w-full">
+                            <div class="flex justify-between">
+                                <div class="flex flex-col w-full gap-2">
+                                    <div class="flex justify-between">
+                                        <h1 class="text-xl font-semi-bold">NFC Business Card Black</h1>
+                                            <!-- <span>100</span> -->
+                                    </div>                        
+                                        <h1 class="text-sm text-gray-400">Trick NFC Business Card ( Black Color )</h1>
+                                    <div class="flex gap-2 text-custom-700 text-xl font-bold"><span>L.E</span><span>200</span></div>
+                                </div>
+                            </div>
+                            <div class="p-1 w-full font-medium text-lg  bg-custom-700 rounded-full  text-white  dark:text-white dark:hover:text-opacity-50 hover:text-opacity-50   duration-500 justify-center flex" >
+                                <button class="w-full">Add to cart</button>
+                            </div>                    
+                        </div>
+                    </div>
+                    <div class="flex items-center flex-col max-w-96">
+                        <!-- img -->
+                            <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 max-w-96 xl:w-96 xl:p-16 p-10 rounded-t-lg flex justify-center items-center">
+                            <img class="max-w-full max-h-full" src="/img/trick-black-card.png" alt="" srcset="">
+                            </div>    
+                        <!-- content -->
+                        <div class=" py-2 flex flex-col gap-3 w-full">
+                            <div class="flex justify-between">
+                                <div class="flex flex-col w-full gap-2">
+                                    <div class="flex justify-between">
+                                        <h1 class="text-xl font-semi-bold">NFC Business Card Black</h1>
+                                            <!-- <span>100</span> -->
+                                    </div>                        
+                                        <h1 class="text-sm text-gray-400">Trick NFC Business Card ( Black Color )</h1>
+                                    <div class="flex gap-2 text-custom-700 text-xl font-bold"><span>L.E</span><span>200</span></div>
+                                </div>
+                            </div>
+                            <div class="p-1 w-full font-medium text-lg  bg-custom-700 rounded-full  text-white  dark:text-white dark:hover:text-opacity-50 hover:text-opacity-50   duration-500 justify-center flex" >
+                                <button class="w-full">Add to cart</button>
+                            </div>                    
+                        </div>
+                    </div>
+                    <!-- main cards -->
+
+
+                  
+                        
+                </div>
+                
+                
+            </div>
+            <!-- End our products section-->
+
+            <!-- start footer -->
+            <div class="container justify-between dark:text-white rounded-t-lg px-12 xl:px-28 py-12 gap-5 mt-4 flex flex-col items-center justify-center bg-custom-600 dark:bg-black dark:bg-opacity-50">
+                <div class="w-60 max-w-full px-0">
+					<a href="index.html" class="block w-full">
+						<div alt="logo" class="footer-logo py-6"></div>
+					</a>
+				</div>
+
+
+                    <div class="flex justify-center items-center border-b border-gray-500/25 w-full pb-5 lg:py-5 ">
+                        <ul class=" flex flex-col lg:flex-row items-center ">
+                            <li class="group relative">
+                                <a
+                                    href="/"
+                                    class="  flex   font-medium text-white group-hover:text-primary dark:text-white    lg:group-hover:text-opacity-50 duration-500">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="group relative">
+                                <a
+                                    href="index.html#about"
+                                    class="  flex   font-medium text-white group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6  lg:group-hover:text-opacity-50 duration-500 xl:ml-10">
+                                    About Us
+                                </a>
+                            </li>
+                            <li class="group relative">
+                                <a
+                                    href="/products.html"
+                                    class="  flex   font-medium text-white group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6  lg:group-hover:text-opacity-50 duration-500 xl:ml-10">
+                                    Products
+                                </a>
+                            </li>
+                           
+                            <li class="group relative">
+                                <a
+                                    href="/contact-us.html"
+                                    class="  flex   font-medium text-white group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6  lg:group-hover:text-opacity-50 duration-500 xl:ml-10">
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li class="group relative">
+                                <a
+                                    href="/accepted-devices.html"
+                                    class="  flex   font-medium text-white group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6  lg:group-hover:text-opacity-50 duration-500 xl:ml-10">
+                                    Accepted Devices
+                                </a>
+                            </li>     
+                        </ul>
+                     
+                  
+                    </div>
+                    <div class="flex justify-center items-center border-b border-gray-500/25 w-full pb-5 lg:py-5 ">
+                        <ul class=" flex flex-col lg:flex-row items-center">
+                            <li class="group relative">
+                                <a
+                                    href="mailto:hello@trick.com"
+                                    class="  flex py-2 text-base font-medium text-black group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-opacity-50 duration-500">
+                                    <div class="flex gap-2 text-white">
+                                        <i class="bi bi-envelope-fill "></i><span>hello@trick.com</span>
+                                       </div>
+                                </a>
+                            </li>
+                            <li class="group relative">
+                                <a
+                                    href="tel:01012877474"
+                                    class="  flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-opacity-50 duration-500 xl:ml-10">
+                                    <div class="flex gap-2 text-white">
+                                        <i class="bi bi-telephone-fill"></i><span>+01012877474</span>
+                                       </div>
+                                    
+                                </a>
+                            </li>
+                            <li class="group relative">
+
+                                    <div class="flex gap-2 text-white   flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-opacity-50 duration-500 xl:ml-10">
+                                        <i class="bi bi-geo-alt-fill text-white"></i><span class="text-white">Egypt</span>
+                                    </div>
+                                    
+                             
+                            </li>
+                             
+                        </ul>
+                       
+                  
+                    </div>
+
+                    <div class="flex flex-col lg:flex-row gap-3 justify-around items-center rounded-full bg-transparent lg:bg-white py-5 mt-0 lg:mt-16 w-full ">
+
+                            <div class="flex justify-center items-center space-x-4 font-poppins">
+                                <a href="#" class="w-12 h-12 flex justify-center items-center bg-custom-700 rounded-full">
+                                    <i class="bi bi-facebook text-xl text-white"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 flex justify-center items-center bg-custom-700 rounded-full">
+                                    <i class="bi bi-twitter-x text-xl text-white"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 flex justify-center items-center bg-custom-700 rounded-full">
+                                    <i class="bi bi-linkedin text-xl text-white"></i>
+                                </a>
+                            
+                              </div>
+
+                              <div class="flex items-center text-md lg:text-2xl px-5 text-custom-700 font-poppins ">
+                                <span> ITrick@2024 All Rights Reserved</span>
+                            </div>   
+
+                              <div class=" font-poppins grid grid-cols-1 items-center justify-items-center lg:grid-cols-2 divide:none lg:divide-x divide-gray-500/25 text-gray-500/75">
+                                  
+                                <div class="lg:w-full pe-1">
+                                    <a href="/terms-of-service.html">Terms of Service</a>
+                                </div>
+                                <div class="lg:w-full ps-1">
+                                    <a href="/privacy-policy.html">Privacy Policy</a>
+                                </div>            
+                                
+                              </div>
+
+
+                    </div>
+
+
+            </div>
+            <!-- end footer -->
+         
+        </div>
+	
+		<!-- toggle button -->
+        <div class="hidden justify-end items-center  h-20 fixed bottom-14 right-0 lg:flex">
+        <div
+            class=" w-72 h-14	 pl-8 pr-5 mr-8 lg:mr-20  bg-white transition  duration-1000 shadow-xl  dark:bg-neutral-900 rounded-3xl justify-end items-center gap-6 inline-flex "
+            id="theme-toggle"
+        >
+
+            <div
+            class=" text-gray-500  text-base font-semi-bold text-xl  text-opacity-50 text-base font-normal font-['Poppins'] leading-10"
+            >
+            Dark
+            </div>
+        
+            <div
+            class="w-full h-8 relative rounded-full pt-0.5 px-1 border border-custom-700 bg-white dark:bg-black relative transition  duration-500 ease-in focus:outline-none focus:ring-2 focus:ring-custom-700 dark:focus:ring-custom-600 dark:focus:border-custom-700 focus:border-transparent"
+            >
+            <div
+            id="theme-toggle-dark-icon"
+            class="hidden rounded-full w-6 h-6 bg-custom-700  relative float-right dark:float-left pointer-events-none transition  duration-1000 ease-in"
+        ></div>
+            <div
+                id="theme-toggle-light-icon"
+                class="hidden rounded-full w-6 h-6 bg-custom-700  relative float-right dark:float-left  pointer-events-none transition  duration-1000 ease-in"
+            ></div>
+            
+            </div>
+            <div
+            class=" text-gray-500  text-opacity-50  text-base font-semi-bold text-xl font-['Poppins'] leading-10"
+        >
+            Light
+        </div>
+        </div>
+        </div>
+
+        
+  <script>
+    var themeToggleDarkIcon = document.getElementById(
+      "theme-toggle-dark-icon"
+    );
+    var themeToggleLightIcon = document.getElementById(
+      "theme-toggle-light-icon"
+    );
+    var themeMobileToggleDarkIcon = document.getElementById(
+      "theme-mobile-toggle-dark-icon"
+    );
+    var themeMobileToggleLightIcon = document.getElementById(
+      "theme-mobile-toggle-light-icon"
+    );
+    console.log(themeMobileToggleLightIcon)
+
+    // Change the icons inside the button based on previous settings
+    if (
+      localStorage.getItem("color-theme") === "dark" ||
+      (!("color-theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      themeToggleLightIcon.classList.remove("hidden");
+      themeMobileToggleLightIcon.classList.remove("hidden");
+      console.log(themeMobileToggleLightIcon)
+      
+    } else {
+      themeToggleDarkIcon.classList.remove("hidden");
+      themeMobileToggleDarkIcon.classList.remove("hidden");
+      console.log(themeMobileToggleDarkIcon)
+
+    }
+
+    function forceRepaint() {
+  // Accessing computed style of an element
+  const bodyStyle = getComputedStyle(document.body);
+  // Triggering a layout update
+  void document.body.offsetWidth;
+  // Using requestAnimationFrame
+  requestAnimationFrame(() => {});
+}
+
+    var themeToggleBtn = document.getElementById("theme-toggle");
+    themeToggleBtn.addEventListener("click", function () {
+  // Toggle icons inside button
+  themeToggleDarkIcon.classList.toggle("hidden");
+  themeToggleLightIcon.classList.toggle("hidden");
+
+  // Toggle dark mode
+  if (localStorage.getItem("color-theme") === "light") {
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("color-theme", "dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+    localStorage.setItem("color-theme", "light");
+  }
+
+  // Force repaint
+  forceRepaint();
+});
+    var themeMobileToggleBtn = document.getElementById("theme-mobile-toggle");
+    themeMobileToggleBtn.addEventListener("click", function () {
+  // Toggle icons inside button
+  themeMobileToggleDarkIcon.classList.toggle("hidden");
+  themeMobileToggleLightIcon.classList.toggle("hidden");
+
+  // Toggle dark mode
+  if (localStorage.getItem("color-theme") === "light") {
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("color-theme", "dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+    localStorage.setItem("color-theme", "light");
+  }
+
+});
+    
+  </script>
+  <script>
+    // Get the navbar toggler button
+    const navbarToggler = document.getElementById('navbarToggler');
+    // Get the navbar collapse menu
+    const navbarCollapse = document.getElementById('navbarCollapse');
+
+    // Add click event listener to navbar toggler button
+    navbarToggler.addEventListener('click', function() {
+        // Toggle the 'hidden' class on navbar collapse menu
+        navbarCollapse.classList.toggle('hidden');
+    });
+</script>
+<script>
+var menuToggle = document.getElementById("burger");
+var themeToggle = document.getElementById("theme-toggle");
+
+    var menuBar = gsap.timeline();
+    
+    menuBar.to('.bar-1', 0.5, {
+        attr: { d: "M8,2 L2,8" },
+        x: 1,
+        ease: Power2.easeInOut
+    }, 'start')
+    
+    menuBar.to('.bar-2', 0.5, {
+        autoAlpha: 0
+    }, 'start')
+    
+    menuBar.to('.bar-3', 0.5, {
+        attr: { d: "M8,8 L2,2" },
+        x: 1,
+        ease: Power2.easeInOut
+    }, 'start')
+    
+    menuBar.reverse();
+    
+    var navTl = gsap.timeline({ paused: true });
+    
+ 
+    navTl.to('.fullpage-menu', {
+        duration: 0,
+        display: "block",
+        ease: Expo.easeInOut
+    }, "<");
+
+
+    
+    navTl.to('.menu-bg', {
+        duration: 1,
+        opacity: 1,
+        ease: Expo.easeInOut
+    }, "<");
+    
+    navTl.from('.main-menu li a', {
+        duration: 1.5,
+        y: "100%",
+        rotateY: 30,
+        stagger: 0.2,
+        ease: Expo.easeInOut
+    }, "-=0.5");
+    
+   
+
+
+
+ 
+    
+    navTl.reverse();
+
+    var themeTl = gsap.timeline({ paused: true });
+
+    themeTl.from('.main-menu li #theme-mobile-toggle', {
+        duration: 1.5,
+        y: "150%",
+        ease: "power1.out",
+    }, "-=0.5");
+    themeTl.reverse();
+
+
+    function updateVisibility() {
+    // Check if the window width is less than 1024px (for example)
+    if (window.innerWidth > 1024 ) {
+        // If it's smaller, display the fullpage-menu
+        menuBar.reversed(true);
+        navTl.reversed(true);
+    }
+}
+updateVisibility();
+    
+window.addEventListener('resize', updateVisibility);
+
+    menuToggle.addEventListener('click', function () {
+        menuBar.reversed(!menuBar.reversed());
+        navTl.reversed(!navTl.reversed());
+        themeTl.reversed(!themeTl.reversed());
+    themeTl.delay(1.5)
+
+    })</script>
+   <script>
+    const scrollDiv = document.getElementById('scrollDiv');
+
+    window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    const isDarkMode = document.documentElement.classList.contains('dark');
+
+    if (scrollPosition > 200) {
+        scrollDiv.classList.remove(isDarkMode ? 'dark:bg-opacity-50' : 'bg-opacity-50');
+        scrollDiv.classList.add(isDarkMode ? 'dark:bg-opacity-100' : 'bg-opacity-100');
+    } else {
+        scrollDiv.classList.remove(isDarkMode ? 'dark:bg-opacity-100' : 'bg-opacity-100');
+        scrollDiv.classList.add(isDarkMode ? 'dark:bg-opacity-50' : 'bg-opacity-50');
+    }
+});
+
+</script>
+
+<script>
+document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const offset = 100; // Adjust this value to set the offset from the top
+        const targetId = this.getAttribute('href');
+        
+        // Check if targetId contains '#', indicating it's an ID selector
+        if (targetId && targetId.includes('#')) {
+            const targetElementId = targetId.split('#')[1]; // Extract the ID part
+            const targetElement = document.getElementById(targetElementId);
+            
+            if (targetElement) {
+                scrollToElement(targetElement, offset);
+            } else {
+                // If the target element doesn't exist on the current page, redirect to the page containing the target element
+                window.location.href = targetId;
+            }
+        }
+    });
+});
+
+// Function to scroll to the element with a given offset
+function scrollToElement(element, offset) {
+    const offsetPosition = element.offsetTop - offset;
+
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+    });
+}
+
+
+</script>
+
+	</body>
+</html>
