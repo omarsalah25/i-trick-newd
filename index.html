@@ -96,7 +96,7 @@
                             </svg>
                     </svg>
                     </button>
-                    <button id="openModalButton" class=" block lg:hidden  absolute top-0 right-8 z-20 relative mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 xl:ml-10 duration-500">
+                    <button id="openModalButtonMobile" class=" block lg:hidden  absolute top-0 right-8 z-20 relative mx-8 flex py-2 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-black lg:group-hover:text-custom-700 xl:ml-10 duration-500">
                         <i class="bi bi-cart4 p-0 text-3xl mb-1 text-custom-700 "></i>
                         <span class="absolute text-xs top-1.5 -left-2 px-2 py-0 rounded-full bg-custom-700 text-white lg:text-md ">0</span>
                     </button>
@@ -1036,6 +1036,7 @@ function scrollToElement(element, offset) {
     // Get references to modal and buttons
     const modalBackground = document.getElementById('cartModalBackground');
     const openModalButton = document.getElementById('openModalButton');
+    const openModalButtonMobile = document.getElementById('openModalButtonMobile');
     const closeModalButton = document.getElementById('closeModalButton');
 
     // Function to open modal
@@ -1056,6 +1057,7 @@ function scrollToElement(element, offset) {
 
     // Event listeners
     openModalButton.addEventListener('click', openModal);
+    openModalButtonMobile.addEventListener('click', openModal);
     closeModalButton.addEventListener('click', closeModal);
 </script>
 
