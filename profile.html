@@ -898,7 +898,63 @@
                 id="tabs-messages03"
                 role="tabpanel"
                 aria-labelledby="tabs-profile-tab03">
-                Tab 3 content
+                <form>
+                    <div class="relative py-5">
+                        <input
+                            placeholder="Current Password"
+                            class="peer h-10 w-full border-b-2 border-gray-300 text-black dark:text-white bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700"
+                            required=""
+                            id="password"
+                            name="password"
+                            type="password"
+                        />
+                        <label
+                            class="absolute left-0 -top-3.5  text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-cborder-custom-700 peer-focus:text-sm"
+                            for="password"
+                            >
+                            <i class="bi bi-lock mr-1"></i>Current Password</label
+                        >
+                        </div>
+                        <div class="relative py-5">
+                            <input
+                                placeholder="New Password"
+                                class="peer h-10 min-w-96 border-b-2 border-gray-300 text-black dark:text-white bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700"
+                                required=""
+                                id="newpassword"
+                                name="newpassword"
+                                type="password"
+                            />
+                            <label
+                                class="absolute left-0 -top-3.5  text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-cborder-custom-700 peer-focus:text-sm"
+                                for="newpassword"
+                                >
+                                <i class="bi bi-lock mr-1"></i>New Password</label
+                            >
+                            </div>
+                            <div class="relative py-5">
+                                <input
+                                    placeholder="Confirm Password"
+                                    class="peer h-10 min-w-96 border-b-2 border-gray-300 text-black dark:text-white bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700"
+                                    required=""
+                                    id="renewPassword"
+                                    name="renewPassword"
+                                    type="password"
+                                />
+                                <label
+                                    class="absolute left-0 -top-3.5  text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-cborder-custom-700 peer-focus:text-sm"
+                                    for="renewPassword"
+                                    >
+                                    <i class="bi bi-lock mr-1"></i>Confirm Password</label
+                                >
+                                </div>
+
+                                <button
+                                class="min-w-96 py-2 px-4 bg-custom-700 hover:bg-custom-600 rounded-md shadow-lg text-white font-semibold transition duration-200"
+                                type="submit"
+                                >
+                                Save
+                                </button>
+                </form>
                 </div>
                     <!-- Change Password tab -->
 
