@@ -437,194 +437,378 @@
 		
         <div class="container  flex flex-col lg:flex-row  " >
             <!-- Start Home section -->
-                <div class="w-full  flex flex-col  p-5 mt-4" id="#">
+                <div class="w-full  flex flex-col gap-10 p-5 mt-4 bg-zinc-100 dark:bg-zinc-800 rounded-3xl py-12" id="#">
                 <!-- title -->
                         
                 <h2 class="lg:text-xl text-md  font-poppins font-bold py-5 text-custom-700 dark:text-white">Shipping info</h2>
-                    <div class="flex flex-col gap-10 container px-5">
-                        <div class="flex justify-between gap-2">
-                            <div class="relative w-full">
-                                <input
-                                    placeholder="first_name"
-                                    class="peer h-10 w-full border-b-2 border-gray-300 text-black dark:text-white bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700"
-                                    required=""
-                                    id="first_name"
-                                    name="first_name"
-                                    type="text"
-                                />
-                                <label
-                                    class="absolute left-0 -top-3.5  text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-cborder-custom-700 peer-focus:text-sm"
-                                    for="first_name"
-                                    >
-                                    <i class="bi bi-person mr-1"></i>First Name</label
-                                >
-                            </div>
-    
-                            <div class="relative w-full">
-                                <input
-                                    placeholder="last_name"
-                                    class="peer h-10 w-full border-b-2 border-gray-300 text-black dark:text-white bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700"
-                                    required=""
-                                    id="last_name"
-                                    name="last_name"
-                                    type="text"
-                                />
-                                <label
-                                    class="absolute left-0 -top-3.5  text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-cborder-custom-700 peer-focus:text-sm"
-                                    for="last_name"
-                                    >
-                                    <i class="bi bi-person mr-1"></i>Last Name</label
-                                >
-                            </div>
-    
-                        </div>
-    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 container px-5">
                         <div class="relative">
                             <input
-                                placeholder="address"
+                                placeholder=""
                                 class="peer h-10 w-full border-b-2 border-gray-300 text-black dark:text-white bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700"
                                 required=""
-                                id="address"
+                                id="firstname"
+                                name="firstname"
+                                type="text"
+                            />
+                            <label
+                                class="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-custom-700 peer-focus:text-sm"
+                                for="firstname"
+                            >
+                                <i class="bi bi-person mr-1"></i>First Name
+                            </label>
+                        </div>
+                        <div class="relative">
+                            <input
+                                placeholder=""
+                                class="peer h-10 w-full border-b-2 border-gray-300 text-black dark:text-white bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700"
+                                required=""
+                                name="last"
+                                type="text"
+                            />
+                            <label
+                                class="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-custom-700 peer-focus:text-sm"
+                            >
+                                <i class="bi bi-person mr-1"></i>Last Name
+                            </label>
+                        </div>
+                    
+                        <div class="relative">
+                            <input
+                                placeholder=""
+                                class="peer h-10 w-full border-b-2 border-gray-300 text-black dark:text-white bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700"
+                                required=""
+                                name="phone"
+                                type="number"
+                            />
+                            <label
+                                class="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-custom-700 peer-focus:text-sm"
+                            >
+                                Phone Number
+                            </label>
+                        </div>
+                    
+                        <div class="relative">
+                            <input
+                                placeholder=""
+                                class="peer h-10 w-full border-b-2 border-gray-300 text-black dark:text-white bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700"
+                                required=""
+                                name="email"
+                                type="text"
+                            />
+                            <label
+                                class="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-custom-700 peer-focus:text-sm"
+                            >
+                                Email Address
+                            </label>
+                        </div>
+                    
+                        <div class="relative">
+                            <select
+                                class="peer h-10 w-full border-b-2 text-black dark:text-white  border-gray-300  bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700"
+                                required=""
+                                id="type"
+                                name="type"
+                                type="type"
+                            >
+                            <option value="Personal" class="text-black">Personal</option>
+                            <option value="Business" class="text-black">Business</option>
+
+                        </select>
+                            <label
+                                class="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-cborder-custom-700 peer-focus:text-sm"
+                                for="type">
+                                <i class="bi bi-briefcase mr-1"></i>
+                                Type (Business or Personal)</label
+                            >
+                        </div>
+                    
+                        <div class="relative">
+                            <input
+                                placeholder=""
+                                class="peer h-10 w-full border-b-2 border-gray-300 text-black dark:text-white bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700"
+                                required=""
+                                name="company"
+                                type="text"
+                            />
+                            <label
+                                class="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-custom-700 peer-focus:text-sm"
+                            >
+                                Company Name
+                            </label>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1  gap-10 container px-5">
+
+                        <div class="relative">
+                            <input
+                                placeholder="Linked In"
+                                class="peer h-10 w-full border-b-2 border-gray-300 text-black dark:text-white bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700"
+                                name="linkedin"
+                                type="text"
+                            />
+                            <label
+                                class="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-custom-700 peer-focus:text-sm"
+                            >
+                                Linked In
+                            </label>
+                        </div>
+
+                        <div class="relative">
+                            <input
+                                placeholder="Facebook"
+                                class="peer h-10 w-full border-b-2 border-gray-300 text-black dark:text-white bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700"
+                                name="facebook"
+                                type="text"
+                            />
+                            <label
+                                class="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-custom-700 peer-focus:text-sm"
+                            >
+                                Facebook
+                            </label>
+                        </div>
+
+                        <div class="relative">
+                            <input
+                                placeholder="Instagram"
+                                class="peer h-10 w-full border-b-2 border-gray-300 text-black dark:text-white bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700"
+                                name="instagram"
+                                type="text"
+                            />
+                            <label
+                                class="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-custom-700 peer-focus:text-sm"
+                            >
+                                Instagram
+                            </label>
+                        </div>
+
+                        <div class="relative">
+                            <input
+                                placeholder="Tik Tok"
+                                class="peer h-10 w-full border-b-2 border-gray-300 text-black dark:text-white bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700"
+                                name="tiktok"
+                                type="text"
+                            />
+                            <label
+                                class="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-custom-700 peer-focus:text-sm"
+                            >
+                                Tik Tok
+                            </label>
+                        </div>
+
+
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 container px-5">
+                       
+                        <div class=" relative">
+                            <input
+                                placeholder="Address"
+                                class="peer h-10 w-full border-b-2 border-gray-300 text-black dark:text-white bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700"
                                 name="address"
                                 type="text"
                             />
                             <label
-                                class="absolute left-0 -top-3.5  text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-cborder-custom-700 peer-focus:text-sm"
-                                for="address"
-                                >
-                                <i class="bi bi-person mr-1"></i>Address</label
+                                class="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-custom-700 peer-focus:text-sm"
                             >
+                                Address
+                            </label>
                         </div>
-    
+
+                        <div class=" relative">
+                            <input
+                                placeholder="City"
+                                class="peer h-10 w-full border-b-2 border-gray-300 text-black dark:text-white bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700"
+                                name="city"
+                                type="text"
+                            />
+                            <label
+                                class="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-custom-700 peer-focus:text-sm"
+                            >
+                                City
+                            </label>
+                        </div>
+
+                        <div class=" relative">
+                            <input
+                                placeholder="Governorate"
+                                class="peer h-10 w-full border-b-2 border-gray-300 text-black dark:text-white bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700"
+                                name="governorate"
+                                type="text"
+                            />
+                            <label
+                                class="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-custom-700 peer-focus:text-sm"
+                            >
+                                Governorate
+                            </label>
+                        </div>
+
+                        <div class=" relative">
+                            <input
+                                placeholder="Postal Code"
+                                class="peer h-10 w-full border-b-2 border-gray-300 text-black dark:text-white bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700"
+                                name="code"
+                                type="number"
+                            />
+                            <label
+                                class="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-custom-700 peer-focus:text-sm"
+                            >
+                                Postal Code
+                            </label>
+                        </div>
+
                     </div>
+                
+                    <div class="flex justify-around min-w-full text-center">
+                        <a
+                        href="signin.html"
+                        class="ud-menu-scroll w-full bg-custom-700 rounded-full 
+                        p-4 py-2 mx-2   text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0    lg:text-white lg:group-hover:text-opacity-50 duration-500 dark:lg:group-hover:text-opacity-50  ">
+                        back
+                    </a>
+                            <a
+                            href="signin.html"
+                            class="ud-menu-scroll w-full bg-custom-700 rounded-full p-4 py-2 mx-2   text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0    lg:text-white lg:group-hover:text-opacity-50 duration-500 dark:lg:group-hover:text-opacity-50  ">
+                            prog
+                        </a>
+
+                    </div>
+                   
 
                  
              
                 </div>
                 <!-- img -->
 
-                <div class="min-w-96  flex flex-col p-5  mt-5  ">
+              
+         </div>
 
-                    <h2 class="lg:text-xl text-md  font-poppins font-bold py-5 text-custom-700 dark:text-white">Order Summary</h2>
-                    
-                    <div class="flex flex-col divide-y bg-zinc-100 p-5 rounded-3xl">
 
-                        <div class="flex ">
-                            <ul class="">
-                                <!-- Sample Cart Item -->
-                                <li class="py-2">
-                                    <div class="flex gap-2">
-                                        <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 w-36 max-h-28 xl:h-32 rounded-lg p-5"
-                                        >
-                                        <img class="w-full" src="/img/trick-black-card.png" alt="" srcset="">
-                                    </div>
-                                        <div class=" py-2 flex flex-col gap-5 w-full">
-                                            <div class="flex justify-between">
-                                                <div class="flex flex-col w-full gap-2">
-                                                    <div class="flex justify-between">
-                                                        <h1 class="text-sm xl:text-lg text-black dark:text-white font-semi-bold">NFC Business Card Black</h1>
-                                                        <!-- <span>100</span> -->
-                                                    </div>               
-                                                    <h1 class="text-xs xl:text-sm text-gray-400">Trick NFC Business Card ( Black Color )</h1>
-                                                    <div class="flex gap-2 text-custom-700 text-sm xl:text-lg font-bold"><span>L.E</span><span>200</span></div>
-                                                </div>
-                                            </div>
-                                            
-                                        
-                                        </div>
-                
-                                        <div class="flex flex-col items-end text-black dark:text-white justify-around">
-                                            <!-- Quantity Controls -->
-                                            <div class="flex ">
-                                                <button class="px-2 py-1 border border-gray-300 rounded-l">-</button>
-                                            <span class="px-2 py-1 border border-gray-300">1</span>
-                                            <button class="px-2 py-1 border border-gray-300 rounded-r">+</button>
-                                            </div>
-                                            <div>
-                                                  <!-- Delete Icon -->
-                                            <button class="px-1  rounded-full bg-red-500 text-white">
-                                                <i   class="bi bi-trash" >
-                                                </i>
-                                            </button>
-                                            </div>
-                                            
-                                          
-                                        </div>
-                
-                
-                                    </div>
-                                </li>
-                
-                               <li class="py-2">
-                                    <div class="flex gap-2">
-                                        <div class="bg-zinc-100	dark:bg-zinc-800 duration-500 w-36 max-h-28 xl:h-32 rounded-lg p-5"
-                                        >
-                                        <img class="w-full" src="/img/trick-black-card.png" alt="" srcset="">
-                                    </div>
-                                        <div class=" py-2 flex flex-col gap-5 w-full">
-                                            <div class="flex justify-between">
-                                                <div class="flex flex-col w-full gap-2">
-                                                    <div class="flex justify-between">
-                                                        <h1 class="text-sm xl:text-lg text-black dark:text-white font-semi-bold">NFC Business Card Black</h1>
-                                                        <!-- <span>100</span> -->
-                                                    </div>               
-                                                    <h1 class="text-xs xl:text-sm text-gray-400">Trick NFC Business Card ( Black Color )</h1>
-                                                    <div class="flex gap-2 text-custom-700 text-sm xl:text-lg font-bold"><span>L.E</span><span>200</span></div>
-                                                </div>
-                                            </div>
-                                            
-                                        
-                                        </div>
-                
-                                        <div class="flex flex-col items-end text-black dark:text-white justify-around">
-                                            <!-- Quantity Controls -->
-                                            <div class="flex ">
-                                                <button class="px-2 py-1 border border-gray-300 rounded-l">-</button>
-                                            <span class="px-2 py-1 border border-gray-300">1</span>
-                                            <button class="px-2 py-1 border border-gray-300 rounded-r">+</button>
-                                            </div>
-                                            <div>
-                                                  <!-- Delete Icon -->
-                                            <button class="px-1  rounded-full bg-red-500 text-white">
-                                                <i   class="bi bi-trash" >
-                                                </i>
-                                            </button>
-                                            </div>
-                                            
-                                          
-                                        </div>
-                
-                
-                                    </div>
-                                </li>
+         <div class="container  flex flex-col lg:flex-row  " >
+            <!-- Start Home section -->
+                <div class="w-full  flex flex-col gap-10 p-5 mt-4 bg-zinc-100 dark:bg-zinc-800 rounded-3xl py-12" id="#">
+                <!-- title -->
+                        
+                <h2 class="lg:text-xl text-md  font-poppins font-bold py-5 text-custom-700 dark:text-white">Shipping info</h2>
+                   
+                    <div class="grid grid-cols-1  gap-10 container px-5">
 
-                            </ul>
+                        <div class="relative">
+                            <select
+                                class="peer h-10 w-full border-b-2  border-gray-300  bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700"
+                                required=""
+                                id="type"
+                                name="type"
+                                type="type"
+                            >
+                            <option value="Cairo" class="text-black dark:text-white">Cairo</option>
+                            <option value="Giza" class="text-black dark:text-white">Giza</option>
+                            <option value="Alexandria" class="text-black dark:text-white">Alexandria</option>
+
+                        </select>
+                            <label
+                                class="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-cborder-custom-700 peer-focus:text-sm"
+                                for="type">
+                                <i class="bi bi-briefcase mr-1"></i>
+                                Choose Your Governorate</label
+                            >
                         </div>
 
-                        <div class="flex flex-col">
-                            <div class="flex justify-between items-center">
-                                <h2 class="lg:text-md text-sm  font-poppins font-bold py-5 text-custom-700 dark:text-white">Subtotal</h2>
-                                <span class="lg:text-md text-sm  font-poppins font-bold py-5 text-custom-700 dark:text-white">100 EG</span>
-                            </div>
-
-
-                            <div class="flex justify-between items-center">
-                                <h2 class="lg:text-md text-sm  font-poppins font-bold py-5 text-custom-700 dark:text-white">Shipping</h2>
-                                <span class="lg:text-md text-sm  font-poppins font-bold py-5 text-custom-700 dark:text-white">0 EG</span>
-                            </div>
-
-
+                        <div class="user-input relative">
+                            <input type="number" name="contactnumber" class="form-control thefirst-input peer h-10 w-full border-b-2 border-gray-300 text-black dark:text-white bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700" placeholder="Contact Phone number">
+                            <label class="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-custom-700 peer-focus:text-sm">Contact Phone number</label>
+                        </div>
+                        <div class="user-input relative">
+                            <input type="text" name="contactaddress" class="form-control peer h-10 w-full border-b-2 border-gray-300 text-black dark:text-white bg-transparent placeholder-transparent focus:outline-none focus:border-custom-700" placeholder="Ship to City, Street Name">
+                            <label class="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-custom-700 peer-focus:text-sm">Ship to City, Street Name</label>
                         </div>
 
-                        <div class="flex justify-between items-center">
-                            <h2 class="lg:text-xl text-lg  font-poppins font-bold py-5 text-custom-700 dark:text-white">Order Total</h2>
-                            <span class="lg:text-xl text-lg  font-poppins font-bold py-5 text-custom-700 dark:text-white">100 EG</span>
+
+                        <div class="flex justify-around min-w-full text-center">
+                            <a
+                            href="signin.html"
+                            class="ud-menu-scroll w-full bg-custom-700 rounded-full 
+                            p-4 py-2 mx-2   text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0    lg:text-white lg:group-hover:text-opacity-50 duration-500 dark:lg:group-hover:text-opacity-50  ">
+                            back
+                        </a>
+                                <a
+                                href="signin.html"
+                                class="ud-menu-scroll w-full bg-custom-700 rounded-full p-4 py-2 mx-2   text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0    lg:text-white lg:group-hover:text-opacity-50 duration-500 dark:lg:group-hover:text-opacity-50  ">
+                                prog
+                            </a>
+
                         </div>
+                       
+
 
                     </div>
+                 
 
+                 
+             
                 </div>
-                             
+                <!-- img -->
+
+              
+         </div>
+
+
+         <div class="container  flex flex-col lg:flex-row  " >
+            <!-- Start Home section -->
+                <div class="w-full  flex flex-col gap-10 p-5 mt-4 bg-zinc-100 dark:bg-zinc-800 rounded-3xl py-12" id="#">
+                <!-- title -->
+                        
+                <h2 class="lg:text-xl text-md  font-poppins font-bold py-5 text-custom-700 dark:text-white">Shipping info</h2>
+                   
+                    <div class="grid grid-cols-1  gap-10 container px-5">
+
+                        <div class="form-of-choose-method bg-zinc-800 dark:bg-zinc-100 rounded-3xl">
+                            <div class="form-check form-check1 flex justify-between p-12">
+                                <div class="half-check flex items-center gap-3">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault0" id="radiovisa" >
+                                    <div class="check-and-paraghraph text-2xl text-white dark:text-black ">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Pay with Card, Wallet and Installment
+                                        </label>
+                                        <p>After clicking “Confirm Payment”, you will be redirected to Pay with Card. </p>
+                                    </div>
+                                </div>
+                                <div class="max-w-96">
+                                    <img src="/img/visa-logos.png" alt="">
+                                </div>
+                            </div>
+                            <div class="form-check form-check2 flex items-center gap-3 text-2xl text-white dark:text-black p-12">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault0" id="radiodelivery" >
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Cash on Delivery (COD)
+                                </label>
+                            </div>
+                        </div>
+                       
+                        <div class="flex justify-around min-w-full text-center">
+                            <a
+                            href="signin.html"
+                            class="ud-menu-scroll w-full bg-custom-700 rounded-full 
+                            p-4 py-2 mx-2   text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0    lg:text-white lg:group-hover:text-opacity-50 duration-500 dark:lg:group-hover:text-opacity-50  ">
+                            back
+                        </a>
+                                <a
+                                href="signin.html"
+                                class="ud-menu-scroll w-full bg-custom-700 rounded-full p-4 py-2 mx-2   text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0    lg:text-white lg:group-hover:text-opacity-50 duration-500 dark:lg:group-hover:text-opacity-50  ">
+                                prog
+                            </a>
+
+                        </div>
+
+
+                    </div>
+                 
+
+                 
+             
+                </div>
+                <!-- img -->
+
+              
          </div>
             <!-- End Home section -->
 
